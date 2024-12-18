@@ -7,6 +7,9 @@
 <p>​	以后看看能不能更新技术文章吧，但是我是菜鸡。</p>
 <p><img src="/images/%E8%8F%9C%E7%9A%84%E5%AE%89%E8%AF%A6.jpg" alt="图片"></p>
 ]]></content>
+      <tags>
+        <tag>碎碎念</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo有关的简单指令</title>
@@ -32,5 +35,21 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站开发过程吐槽</title>
+    <url>/2024/12/18/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E5%90%90%E6%A7%BD/</url>
+    <content><![CDATA[<ol>
+<li>国内的hexo init指令安装支持真的好慢。</li>
+<li>网站Next主题的子主题线上显示不出来，发现要清除缓存才行。</li>
+<li>搞了半天评论系统看不到效果，结果发现要点进文章里面才能评论。。。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
 </search>
