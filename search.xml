@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/12/17/hello-world/</url>
+    <content><![CDATA[<p>​	在距离期末周还有2周时，我建立了自己的博客网站，之前卡住没搞好主要因为hexo init 一直卡住。</p>
+<p>​	以后看看能不能更新技术文章吧，但是我是菜鸡。</p>
+<p><img src="/images/%E8%8F%9C%E7%9A%84%E5%AE%89%E8%AF%A6.jpg" alt="图片"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo有关的简单指令</title>
+    <url>/2024/12/17/hexo%E6%9C%89%E5%85%B3%E7%9A%84%E7%AE%80%E5%8D%95%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<h5 id="这里记录一下更新hexo需要的东西，以免以后忘了。"><a href="#这里记录一下更新hexo需要的东西，以免以后忘了。" class="headerlink" title="这里记录一下更新hexo需要的东西，以免以后忘了。"></a><strong>这里记录一下更新</strong>hexo需要的东西，以免以后忘了。</h5><h3 id="文章有关指令："><a href="#文章有关指令：" class="headerlink" title="文章有关指令："></a>文章有关指令：</h3><h4 id="建立新文章："><a href="#建立新文章：" class="headerlink" title="建立新文章："></a>建立新文章：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new (文章标题)</span><br></pre></td></tr></table></figure>
+
+<h4 id="文章添加图片方法1：全局文件夹"><a href="#文章添加图片方法1：全局文件夹" class="headerlink" title="文章添加图片方法1：全局文件夹"></a>文章添加图片方法1：全局文件夹</h4><ol>
+<li><p>在resourse文件夹下添加一个叫images的文件夹（叫什么都行），在里面放入文章所需图片。</p>
+</li>
+<li><p>使用md语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![图片](/images/图片名字.jpg &quot;备注&quot;)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="预览与上传："><a href="#预览与上传：" class="headerlink" title="预览与上传："></a>预览与上传：</h4><ol>
+<li><p>预览指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新上传指令（更新完记得f5强制更新网页，不然可能显示不出来更新后结果）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+  </entry>
+</search>
