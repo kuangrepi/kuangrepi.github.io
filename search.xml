@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Markdown常见基础符号</title>
+    <url>/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/</url>
+    <content><![CDATA[<ol type="1">
+<li><p>上下标</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;sub&gt;下标&lt;/sub&gt;</span><br><span class="line">&lt;sup&gt;上标&lt;/sup&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式</p>
+<ol type="1">
+<li>包含：⊆</li>
+<li>等价于：⇔</li>
+<li>任意：∀</li>
+<li>lambda λ （笑死了，一直以为是lamda，被周志华的组误导了）</li>
+<li>求和：∑</li>
+<li>连乘：∏</li>
+<li>梯度：∇</li>
+<li>复合：∘</li>
+<li>h̃，w̃，z̃，θ，φ</li>
+</ol></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Typora怎么打开多个窗口</title>
     <url>/2024/12/26/Typora%E6%80%8E%E4%B9%88%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3/</url>
     <content><![CDATA[<p>网上发现没人解决这个，自己试出来了。</p>
@@ -21,7 +45,7 @@
 在距离期末周还有2周时，我建立了自己的博客网站，之前卡住没搞好主要因为hexo
 init 一直卡住。</p>
 <p>​ 以后看看能不能更新技术文章吧，但是我是菜鸡。</p>
-<p><img src="/images/Hello-World/菜的安详.jpg" /></p>
+<p><img src="/images/hello-world/菜的安详.jpg" /></p>
 ]]></content>
       <tags>
         <tag>碎碎念</tag>
@@ -74,30 +98,6 @@ id="这里记录一下更新hexo需要的东西以免以后忘了"><strong>这�
 ]]></content>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown常见基础符号</title>
-    <url>/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/</url>
-    <content><![CDATA[<ol type="1">
-<li><p>上下标</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;sub&gt;下标&lt;/sub&gt;</span><br><span class="line">&lt;sup&gt;上标&lt;/sup&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式</p>
-<ol type="1">
-<li>包含：⊆</li>
-<li>等价于：⇔</li>
-<li>任意：∀</li>
-<li>lambda λ （笑死了，一直以为是lamda，被周志华的组误导了）</li>
-<li>求和：∑</li>
-<li>连乘：∏</li>
-<li>梯度：∇</li>
-<li>复合：∘</li>
-<li>h̃，w̃，z̃，θ，φ</li>
-</ol></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
