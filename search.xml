@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Typora怎么打开多个窗口</title>
+    <url>/2024/12/26/Typora%E6%80%8E%E4%B9%88%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3/</url>
+    <content><![CDATA[<p>网上发现没人解决这个，自己试出来了。</p>
+<p>使用Typora有一个很难受的地方，你想打开两个md文件左右对照看，然后你在打开一个md文件的情况下，点击打开另一个md文件，Typora就会给你展示一下它的欢迎页面，然后就没有然后了。你用Typora里面的打开文件功能也不行。</p>
+<p><img src="/images/Typora怎么打开多个窗口/Typora欢迎页面.png" /></p>
+<h5 id="解决方案">解决方案</h5>
+<p>右键点击Typora图标，以管理员身份运行，然后在那个窗口用左上角的文件—打开...打开第一个文件，然后继续打开第二个文件，就能成功打开两个文件了，原理未知。</p>
+<p><img src="/images/Typora怎么打开多个窗口/文件打开.png" /></p>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2024/12/17/hello-world/</url>
-    <content><![CDATA[<p>​	在距离期末周还有2周时，我建立了自己的博客网站，之前卡住没搞好主要因为hexo init 一直卡住。</p>
-<p>​	以后看看能不能更新技术文章吧，但是我是菜鸡。</p>
-<p><img src="/images/%E8%8F%9C%E7%9A%84%E5%AE%89%E8%AF%A6.jpg" alt="图片"></p>
+    <content><![CDATA[<p>​
+在距离期末周还有2周时，我建立了自己的博客网站，之前卡住没搞好主要因为hexo
+init 一直卡住。</p>
+<p>​ 以后看看能不能更新技术文章吧，但是我是菜鸡。</p>
+<p><img src="/images/Hello-World/菜的安详.jpg" /></p>
 ]]></content>
       <tags>
         <tag>碎碎念</tag>
@@ -14,23 +30,24 @@
   <entry>
     <title>hexo有关的简单指令</title>
     <url>/2024/12/17/hexo%E6%9C%89%E5%85%B3%E7%9A%84%E7%AE%80%E5%8D%95%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<h5 id="这里记录一下更新hexo需要的东西，以免以后忘了。"><a href="#这里记录一下更新hexo需要的东西，以免以后忘了。" class="headerlink" title="这里记录一下更新hexo需要的东西，以免以后忘了。"></a><strong>这里记录一下更新</strong>hexo需要的东西，以免以后忘了。</h5><h3 id="文章有关指令："><a href="#文章有关指令：" class="headerlink" title="文章有关指令："></a>文章有关指令：</h3><h4 id="建立新文章："><a href="#建立新文章：" class="headerlink" title="建立新文章："></a>建立新文章：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new (文章标题)</span><br></pre></td></tr></table></figure>
-
-<h4 id="文章添加图片方法1：全局文件夹"><a href="#文章添加图片方法1：全局文件夹" class="headerlink" title="文章添加图片方法1：全局文件夹"></a>文章添加图片方法1：全局文件夹</h4><ol>
-<li><p>在resourse文件夹下添加一个叫images的文件夹（叫什么都行），在里面放入文章所需图片。</p>
-</li>
+    <content><![CDATA[<h5
+id="这里记录一下更新hexo需要的东西以免以后忘了"><strong>这里记录一下更新</strong>hexo需要的东西，以免以后忘了。</h5>
+<h3 id="文章有关指令">文章有关指令：</h3>
+<h4 id="建立新文章">建立新文章：</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new (文章标题)</span><br></pre></td></tr></table></figure>
+<h4 id="文章添加图片方法1全局文件夹">文章添加图片方法1：全局文件夹</h4>
+<ol type="1">
+<li><p>在resourse文件夹下添加一个叫images的文件夹（叫什么都行），在里面放入文章所需图片。</p></li>
 <li><p>使用md语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![图片](/images/图片名字.jpg &quot;备注&quot;)</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![显示给别人看的图片下标](/images/图片名字.jpg &quot;自己看的备注&quot;) #注意&quot;自己看的备注&quot;前面有个空格</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="预览与上传："><a href="#预览与上传：" class="headerlink" title="预览与上传："></a>预览与上传：</h4><ol>
+<h4 id="预览与上传">预览与上传：</h4>
+<ol type="1">
 <li><p>预览指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新上传指令（更新完记得 CTRL + f5 强制更新网页，不然可能显示不出来更新后结果）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g # 编译</span><br><span class="line">hexo d # 上传</span><br></pre></td></tr></table></figure>
-
-
-</li>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
+<li><p>更新上传指令（更新完记得 CTRL + f5
+强制更新网页，不然可能显示不出来更新后结果）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g # 编译</span><br><span class="line">hexo d # 上传</span><br></pre></td></tr></table></figure></li>
 <li><p>如果线上还是不更新，在编译上传之前先清除缓存</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></li>
 </ol>
@@ -42,14 +59,1459 @@
   <entry>
     <title>网站开发过程吐槽</title>
     <url>/2024/12/18/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E5%90%90%E6%A7%BD/</url>
-    <content><![CDATA[<ol>
-<li>国内的hexo init指令安装支持真的好慢。</li>
-<li>网站Next主题的子主题线上显示不出来，发现要清除缓存才行。</li>
-<li>搞了半天评论系统看不到效果，结果发现要点进文章里面才能评论。。。</li>
+    <content><![CDATA[<ol type="1">
+<li><p>国内的hexo init指令安装支持真的好慢。</p></li>
+<li><p>网站Next主题的子主题线上显示不出来，发现要清除缓存才行。</p></li>
+<li><p>搞了半天评论系统看不到效果，结果发现要点进文章里面才能评论。。。</p></li>
+<li><p>渲染Latex半天才搞好，网上教程不太靠谱</p>
+<ol type="1">
+<li><p>使用pandoc巨逆天，开始看的几个教程都没说要自己另外安装一个pandoc，并且安装完要重启，不然就出bug。</p></li>
+<li><p>Next主题的_config.yml文件的mathjax部分删去了某些代码，导致我以为不需要，结果还是得像旧版本一样有</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+<p>这尼玛谁想得到，试麻了。</p></li>
+</ol></li>
 </ol>
 ]]></content>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown常见基础符号</title>
+    <url>/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/</url>
+    <content><![CDATA[<ol type="1">
+<li><p>上下标</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;sub&gt;下标&lt;/sub&gt;</span><br><span class="line">&lt;sup&gt;上标&lt;/sup&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式</p>
+<ol type="1">
+<li>包含：⊆</li>
+<li>等价于：⇔</li>
+<li>任意：∀</li>
+<li>lambda λ （笑死了，一直以为是lamda，被周志华的组误导了）</li>
+<li>求和：∑</li>
+<li>连乘：∏</li>
+<li>梯度：∇</li>
+<li>复合：∘</li>
+<li>h̃，w̃，z̃，θ，φ</li>
+</ol></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最优化导论总结</title>
+    <url>/2024/12/23/%E6%9C%80%E4%BC%98%E5%8C%96%E5%AF%BC%E8%AE%BA%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h4 id="凸集合">凸集合</h4>
+<h5 id="仿射凸集锥">1. 仿射，凸集，锥</h5>
+<ol type="1">
+<li>组合：θ<sub>1</sub>x<sub>1</sub>+...+θ<sub>k</sub>x<sub>k</sub>被称为点x<sub>1</sub>，...，x<sub>k</sub>的...组合当...
+<ol type="1">
+<li>仿射组合： θ<sub>1</sub>+...+θ<sub>k</sub> = 1</li>
+<li>凸组合：θ<sub>1</sub>+...+θ<sub>k</sub> =
+1；θ<sub>1</sub>，...，θ<sub>k</sub> &gt; 0</li>
+<li>凸锥组合：θ<sub>1</sub>，...，θ<sub>k</sub> &gt; 0</li>
+</ol></li>
+<li>包：C ⊆ R<sup>n</sup> 中点的所有...组合组成的集合
+<ol type="1">
+<li>仿射包： <strong>aff</strong> C</li>
+<li>凸包 ：<strong>conv</strong> C</li>
+<li>锥包：是包含 C 的最小锥</li>
+<li>闭包：<strong>cl</strong> C</li>
+</ol></li>
+<li>仿射有关：
+<ol type="1">
+<li>C 是一个仿射集合且 x<sub>0</sub>∈C，则 V = C - x<sub>0</sub>
+是一个子空间，即关于加法和数乘是封闭的，经过原点。反之，仿射空间可以表示为一个子空间加上一个偏移。</li>
+<li>仿射维数：C 的仿射维数为其仿射包的维数。</li>
+<li>相对内部 <strong>relint</strong> C：如果 C ⊆ R<sup>n</sup>
+的仿射维度小于 n，那么 R<sup>n</sup> ≠ R<sup>n</sup> 中。C 的相对内部为
+R<sup>n</sup> 的内部。</li>
+<li>相对边界：<strong>cl</strong>  <strong>relint</strong> C</li>
+</ol></li>
+</ol>
+<h5 id="重要的例子">2. 重要的例子</h5>
+<ol type="1">
+<li>超平面：<strong>{ x|a<sup>T</sup>x = b}</strong>
+<ol type="1">
+<li>是一个关于 x 的非平凡线性方程的解空间，故是一个仿射集</li>
+<li>可以看作 <strong>法线方向</strong> 为 a 的超平面，而常数 b
+决定这个平面从原点的 <strong>偏移</strong>。</li>
+</ol></li>
+<li>半空间：<strong>{ x|a<sup>T</sup>x ≤ b}</strong>
+<ol type="1">
+<li>一个超平面将 R<sup>n</sup> 划分为两个半空间。</li>
+<li>是凸的，但不是仿射的。</li>
+<li><strong>{ x|a<sup>T</sup>x &lt; b}</strong> 是半空间 <strong>{
+x|a<sup>T</sup>x ≤ b}</strong> 的内部，称为半开空间。</li>
+</ol></li>
+<li>范数有关：设|| · ||是 R<sup>n</sup> 中的范数
+<ol type="1">
+<li>范数球：<strong>{ x | ||x - x<sub>c</sub>|| ≤ r}</strong> 以
+x<sub>c</sub> 为圆心，r 为半径，是凸的。</li>
+<li>范数锥：<strong>{ (x,t) | ||x|| ≤ r}</strong> ⊆
+R<sup>n+1</sup>，是凸锥。</li>
+</ol></li>
+<li>多面体：有限个半空间和超平面的交集
+<ol type="1">
+<li>仿射集合，射线，线段，半空间都是多面体，多面体是凸集。</li>
+</ol></li>
+<li>半正定锥：用 S<sup>n</sup> 表示对称的 n×n
+的矩阵集合，S<sup>n</sup><sub>+</sub>
+表示对称半正定矩阵的集合，S<sup>n</sup><sub>++</sub>
+表示对称正定矩阵的集合。
+<ol type="1">
+<li>S<sup>n</sup><sub>+</sub> 是一个凸锥。</li>
+</ol></li>
+</ol>
+<h5 id="保凸运算">3. 保凸运算</h5>
+<ol type="1">
+<li><p>交集</p></li>
+<li><p>仿射函数：函数 f : R<sup>n</sup> → R<sup>m</sup>
+是仿射的，如果它是一个线性函数和一个常数的和，即具有 f (x) = Ax + b
+的形式，其中 A ∈ R<sup>n×m</sup>，b ∈ R<sup>m</sup>。假设 S 包含于
+R<sup>n</sup> 是凸的，并且 f : R<sup>n</sup> →
+R<sup>m</sup>是仿射函数。那么，s 在 f 下的象：f (S) = {f (x)|x ∈ S}
+是凸的。</p>
+<ol type="1">
+<li>例子：平移 S + a；伸缩 aS</li>
+</ol></li>
+<li><p>透视函数：定义 P：R<sup>n+1</sup> → R<sup>n</sup>，P(z,t) = z/t
+为透视函数，其定义域 <strong>dom</strong> P = R<sup>n</sup> ×
+R<sub>++</sub></p>
+<ol type="1">
+<li>例子，例如（2，3，4）经过透视函数后为（2/4，3/4)。</li>
+</ol></li>
+<li><p>线性分式函数：由透视函数与仿射函数复合而成：f(x) = (Ax + b) /
+(c<sup>T</sup>x + d) <strong>dom</strong> f = {x|c<sup>T</sup>x + d &gt;
+0}</p>
+<ol type="1">
+<li><p>可以将仿射函数与透视函数视为特殊的线性分式函数。</p></li>
+<li><p>例子： <span class="math display">\[
+设 A = \begin{bmatrix}1&amp;2\\3&amp;4\end{bmatrix}, b =
+\begin{bmatrix}1\\1\end{bmatrix}, c = \begin{bmatrix}1\\2\end{bmatrix},
+d = 3, x = \begin{bmatrix}x_1\\x_2\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\text{则线性分式函数} y =
+f(x)=\frac{\begin{bmatrix}1&amp;2\\3&amp;4\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}+\begin{bmatrix}1\\1\end{bmatrix}}{\begin{bmatrix}1&amp;2\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}+3}
+\]</span></p>
+<p><span class="math display">\[
+\text{所以} y=\begin{bmatrix}\frac{x_1 + 2x_2+1}{x_1 +
+2x_2+3}\\\frac{3x_1 + 4x_2+1}{x_1 + 2x_2+3}\end{bmatrix}
+\]</span></p></li>
+</ol></li>
+</ol>
+<h5 id="广义不等式">4. 广义不等式</h5>
+<ol type="1">
+<li><p>正常锥：称 K ∈ R<sup>n</sup> 为正常锥，如果它满足</p>
+<ul>
+<li>K 是凸的</li>
+<li>K 是闭的</li>
+<li>K 是实的，即具有非空内部</li>
+<li>K 是尖的，即不包含直线</li>
+</ul>
+<p>正常锥可以定义广义不等式：x ≤<sub>K</sub> y ⇔ y - x ∈ K；x
+&lt;<sub>K</sub> y ⇔ y - x ∈ <strong>int</strong> K</p></li>
+<li><p>广义不等式的性质：</p>
+<ul>
+<li>对于加法保序的</li>
+<li>具有传递性</li>
+<li>对于非负数乘是保序的</li>
+<li>是自反的</li>
+<li>是反对称的</li>
+<li>对于极限运算是保序的</li>
+</ul></li>
+<li><p>最小元：对于每个 y ∈ S， 均有 x ≤<sub>K</sub> y， 称 x ∈ S
+是最小元，最小元唯一。</p></li>
+<li><p>极小元：如果 y ∈ S， x ≤<sub>K</sub> y 推出 y = x 称 x ∈ S
+是极小元，极小元可以有多个。</p></li>
+</ol>
+<h5 id="分离与支撑超平面">5. 分离与支撑超平面</h5>
+<ol type="1">
+<li>分离超平面定理：两个不相交凸集 C、D，存在 a ≠ 0 和 b 使得对于所有 x
+∈ C 有 a<sup>T</sup>x ≤ b，对于所有 x ∈ D 有 a<sup>T</sup>x ≥ b，超平面
+<strong>{ x|a<sup>T</sup>x = b}</strong> 被称为分离超平面。</li>
+<li>严格分离，即对于所有 x ∈ C 有 a<sup>T</sup>x &lt; b，对于所有 x ∈ D
+有 a<sup>T</sup>x &gt; b：不相交凸集不一定严格分离。</li>
+<li>支撑超平面定理：
+<ol type="1">
+<li>设 C ⊆ R<sup>n</sup> 而 x<sub>0</sub> 是其边界 <strong>bd</strong> C
+上的一点，即 x<sub>0</sub> ∈ <strong>bd</strong> C = <strong>cl</strong>
+C  <strong>int</strong> C，如果 a ≠ 0 并且对任意 x ∈ C 满足
+a<sup>T</sup>x ≤ a<sup>T</sup>x<sub>0</sub> 那么称超平面 <strong>{
+x|a<sup>T</sup>x = b}</strong> 为集合 C 在 x<sub>0</sub>
+处的支撑超平面。</li>
+<li>任意非空凸集 C 和 x<sub>0</sub> ∈ <strong>bd</strong> C，在
+x<sub>0</sub> 处存在 C 的支撑超平面。</li>
+</ol></li>
+</ol>
+<h5 id="对偶锥与广义不等式">6. 对偶锥与广义不等式</h5>
+<ol type="1">
+<li>对偶锥：令 K 为一个锥。集合 K<sup>*</sup> = <strong>{ y |
+x<sup>T</sup>y ≥ 0, ∀ x ∈ K}</strong> 称为 K 的对偶锥，且总是凸的。</li>
+<li>对偶锥的性质：
+<ul>
+<li>K<sup>*</sup> 是闭凸锥</li>
+<li>K<sub>1</sub> ⊆ K<sub>2</sub> 可导出 <a
+href="">K<sup>*</sup><sub>1</sub></a> ⊆ K<sup>*</sup><sub>2</sub></li>
+<li>如果 K 有非空内部，则 K<sup>*</sup> 是尖的。</li>
+<li>如果 K 的闭包是尖的，则 K<sup>*</sup> 有非空内部</li>
+<li><a href="">K<sup>**</sup></a> 是 K 的凸包的闭包（如果 K
+是闭和凸的，则 K<sup>*</sup> = K）</li>
+</ul></li>
+<li>广义不等式的对偶：凸锥 K 是正常锥，可以导出广义不等式
+≤<sub>K</sub>。其对偶锥 <a
+href="http://localhost:4000/">K<sup>*</sup></a>
+也是正常的，也可以导出广义不等式 ≤<sub>K<sup>*</sup></sub>,称其为
+≤<sub>K</sub> 的对偶。</li>
+<li>广义不等式及其对偶的性质：（以下 λ 与 K
+中任意两个元素x、y的夹角都小于90°，其可以看作 x 与 y 到 λ 上的投影）
+<ol type="1">
+<li>x ≤<sub>K</sub> y 当且仅当对于任意 λ ≥<sub>K<sup>*</sup></sub> 0 有
+λ<sup>T</sup>x ≤ λ<sup>T</sup>y。</li>
+<li>x &lt;<sub>K</sub> y 当且仅当对于任意 λ ≥<sub>K<sup>*</sup></sub> 0
+和 λ ≠ 0 有 λ<sup>T</sup>x &lt; λ<sup>T</sup>y。</li>
+</ol></li>
+<li>最小元对偶性质：x 是 S 上关于广义不等式 K
+的最小元的充要条件是，对于所有 λ &gt;<sub>K<sup>*</sup></sub> 0 ，x 是 z
+∈ S 上极小化 λ<sup>T</sup>z 的唯一最优解。(可以理解为 λ<sup>T</sup>z 是
+z 到 λ 的投影，只有 z 是 x 的时候 λ<sup>T</sup>z 极小)
+<ol type="1">
+<li>几何上：对于任意λ &gt;<sub>K<sup>*</sup></sub> 0，超平面 <strong>{ y
+| λ<sup>T</sup>(z - x) = 0}</strong> 是在 x 处对 S
+的一个严格支撑超平面（严格说明只相交于x）</li>
+</ol></li>
+<li>极小元对偶性质： 如果 λ &gt;<sub><a href="">K<sup>*</sup></a></sub>
+0 ，x 在 z ∈ S 上极小化 λ<sup>T</sup>z ，那么是 x
+极小的。逆命题一般不成立：S 上的极小元 x 可以对于任何 λ 都不是 z ∈ S
+上极小化 λ<sup>T</sup>z 的解。（需要 S 是凸集才成立，即对于凸集 S
+上的任何极小元 x 存在非零的 λ &gt;<sub>K<sup>*</sup></sub> 0 是 z ∈ S
+上极小化 λ<sup>T</sup>z 的解。）</li>
+<li>最小元与极小元的对偶性质的对比：要满足最小元，需要对偶锥中所有的
+λ，x 都是在 z ∈ S 上极小化的 λ<sup>T</sup>z，而极小元只需要在一个 λ
+上满足 x 是 z ∈ S 上极小化的 λ<sup>T</sup>z。</li>
+</ol>
+<h4 id="凸函数">凸函数</h4>
+<h5 id="基本性质">1. 基本性质</h5>
+<ol type="1">
+<li><p>一个函数 f: R<sup>n</sup> → R 称为凸函数，如果对于任意的 x₁, x₂ ∈
+<strong>dom</strong> f 和 θ ∈ [0, 1]，有以下不等式成立： <span
+class="math display">\[
+f(\theta x_1+(1 - \theta)x_2) \leq \theta f(x_1)+(1 - \theta)f(x_2)
+\]</span></p>
+<ol type="1">
+<li>将定义中的小于等于改为小于，则定义的为严格凸函数。</li>
+<li>几何意义：函数 f
+的图像<strong>在任意两点之间的线段位于函数曲线的上方或与函数曲线重合。</strong>凸函数的这种性质确保了它们没有局部极小值，任意局部极小点也是全局极小点。</li>
+</ol></li>
+<li><p>拓展值延伸：将 f(x) 的定义域由原 <strong>dom</strong> f
+扩展到全域，在 <strong>dom</strong> f 外的函数值定为 +∞。</p></li>
+<li><p>一阶条件：假设 f 可微（即其梯度 ∇f 在开集 <strong>dom</strong> f
+内处处存在），则函数 f 是凸函数的充要条件是 <strong>dom</strong> f
+是凸集且对于任意 x, y ∈ <strong>dom</strong> f，下式成立： <span
+class="math display">\[
+f(\theta x_1+(1 - \theta)x_2) \leq \theta f(x_1)+(1 - \theta)f(x_2)
+\]</span></p>
+<ol type="1">
+<li>将定义中的大于等于改为大于，则定义的为严格凸函数。</li>
+<li>几何意义：这意味着在 f
+每个点，<strong>函数图像的切线不会超过函数图像本身。</strong></li>
+</ol></li>
+<li><p>对于二次可微函数，函数 f 是凸的，当且仅当它的 Hessian
+矩阵∇<sup>2</sup>f (x) 是半正定的，即： <span class="math display">\[
+∇²f(x) \geq 0
+\]</span></p>
+<ol type="1">
+<li>这表示 Hessian 矩阵的所有特征值都是非负的。</li>
+<li>将定义中的大于等于改为大于，则定义的为严格凸函数。</li>
+</ol></li>
+</ol>
+<h5 id="例子">2. 例子</h5>
+<ol type="1">
+<li><p>指数函数：对于任意的a∈R,函数 e<sup>ax</sup>在 R
+上是<strong>凸的</strong>。</p></li>
+<li><p>幂函数：当 a ≥ 1或 a ≤ 0时，x<sup>a </sup> 在 R<sub>++</sub>
+上是<strong>凸函数</strong>，当 0 ≤ a ≤ 1时，x<sup>a </sup> 在
+R<sub>++</sub> 上是凹函数。</p></li>
+<li><p>绝对值幂函数：当 p ≥ 1时，函数|x|<sup>p</sup>在 R
+上是<strong>凸函数</strong>。</p></li>
+<li><p>对数函数：函数 <em>log</em> x在 R<sub>++</sub>
+上是<strong>凹函数</strong>。</p></li>
+<li><p>负熵</p>
+<ol type="1">
+<li>定义：负熵 f(x) = x<em>log</em>(x)，定义域为 R<sub>++</sub> 或
+R<sub>+</sub>，当 x = 0 时定义函数值为0。</li>
+<li>可通过二阶条件证明f<sup>''</sup>(x) &gt;
+0，所以负熵是严格<strong>凸函数</strong>。</li>
+</ol></li>
+<li><p>范数：R<sup>n</sup>
+上任意范数均为凸函数。（三角不等式可得）</p></li>
+<li><p>最大值函数：函数 f(x) = max{x<sub>1</sub>+...+x<sub>n</sub>} 在
+R<sup>n</sup> 上是<strong>凸函数</strong>。</p></li>
+<li><p>二次-线性分式函数：f(x, y) = x<sup>n</sup> / y，在其定义域为
+<strong>dom</strong> f = R × R<sub>++</sub> = {(x, y) ∈ R<sup>n</sup> |
+y &gt; 0}是凸函数。</p></li>
+<li><p>指数和的函数：函数f(x) =
+<em>log</em>(∑e<sup>x<sub>i</sub></sup>)在 R<sup>n</sup>
+是<strong>凸函数</strong></p>
+<ol type="1">
+<li><p>这个函数可以看作最大值函数的可微近似.因为</p>
+<p>max{x<sub>1</sub>+...+x<sub>n</sub>} ≤ f(x) ≤
+max{x<sub>1</sub>+...+x<sub>n</sub>} + <em>log</em> n</p></li>
+</ol></li>
+<li><p>几何平均函数：f(x) = （∏x<sub>i</sub>)<sup>1/n</sup>, 在定义域
+<strong>dom</strong> f = R<sup>n</sup><sub>++</sub>
+上是<strong>凹函数</strong>。</p></li>
+<li><p>对数行列式：f(x) = <em>log det</em> x, 在定义域
+<strong>dom</strong> f = S<sup>n</sup><sub>++</sub>
+上是<strong>凹函数</strong>。</p></li>
+</ol>
+<h5 id="有关概念">3. 有关概念</h5>
+<ol type="1">
+<li><p>下水平集</p>
+<ol type="1">
+<li>定义：函数 f:R<sup>n</sup> → R 的 α - 下水平集定义为Cα = {x∈dom
+f|f(x) ≤ α}.</li>
+<li>凸函数的下水平集都是凸集，但下水平集都是凸集的函数不一定是凸函数。例如，函数
+f(x) =
+-e<sup>x</sup>在R上不是凸函数(实质上，它是严格凹函数)，但是其所有下水平集均为凸集。</li>
+<li>如果 f 是凹函数，则由 {x∈dom f|f(x) ≥ α} 定义的 α -
+上水平集也是凸函数。</li>
+</ol></li>
+<li><p>上境图 <strong>epi</strong> f</p>
+<ol type="1">
+<li><p>定义：函数 f:R<sup>n</sup> → R 的图像定义为{(x,f (x))|x∈dom
+f},它是 R<sup>n+1</sup> 空间的一个子集。函数 f:R<sup>n</sup> → R
+的上境图定义为： <span class="math display">\[
+\text{epi } f =\{(x,t)|x\in\text{dom } f,f (x) \leq t\}
+\]</span>
+<strong>简单来说，上境图包含了函数图像之上的所有点。</strong></p></li>
+<li><p>对应有亚图 <strong>hypo</strong> ：hypo f = {(x,t)|t &lt;= f (x)}
+<strong>简单来说，亚图包含了函数图像以下的所有点。</strong></p></li>
+<li><p>凸性与上境图的关系：</p>
+<ol type="1">
+<li>凸函数的上境图是凸集，反之，如果一个函数的上境图是凸集，那么这个函数是凸函数。</li>
+<li>凹函数的亚图是凸集，反之如果一个函数的亚图是凸集，那么这个函数是凹函数。</li>
+</ol></li>
+</ol></li>
+<li><p>Jensen不等式及其扩展</p>
+<ol type="1">
+<li>f(θx<sub>1 </sub> + (1 - θ)x<sub>2</sub>) ≤ θf(x<sub>1</sub>) + (1 -
+θ)f(x<sub>2</sub>)</li>
+<li>f(θ<sub>1</sub>x<sub>1 </sub> + ... + θ<sub>k</sub>x<sub>k</sub>) ≤
+θf(x<sub>1</sub>) + ... + θ<sub>k</sub>f(x<sub>k</sub>), S.T.
+θ<sub>1 </sub> + ... + θ<sub>k</sub> = 1; θ<sub>1 </sub> ，...，
+θ<sub>k</sub> &gt; 0</li>
+<li>...</li>
+</ol></li>
+</ol>
+<h5 id="保凸运算-1">4, 保凸运算</h5>
+<ol type="1">
+<li><p>非负加权求和</p></li>
+<li><p>复合仿射映射：函数 f:R<sup>n</sup> → R，A ∈ R<sup>n×m</sup> ，b ∈
+R<sup>m</sup> ，定义 g R<sup>m</sup> → R为： <span
+class="math display">\[
+g(x)=f(Ax + b)
+\]</span></p>
+<ol type="1">
+<li>若函数 f 是凸函数，则 g 是凸函数；若函数 f 是凹函数，则 g
+是凹函数。</li>
+<li>二阶条件可证明</li>
+</ol></li>
+<li><p>逐点最大：设 f1 (x)，f2 (x)，……，fm (x)
+是凸函数，则逐点最大值定义为： <span class="math display">\[
+f(x)=\max\{f_1(x), f_2(x), \cdots, f_m(x)\}
+\]</span> 新函数 f (x) 仍然是凸函数。</p></li>
+<li><p>逐点上确界：设 f (x,y) 是一个关于 x 和 y 的函数，A 是 y
+的取值范围，逐点上确界函数 g (x) 定义为： <span class="math display">\[
+g(x)=\sup_{y\in A} f(x,y)
+\]</span></p>
+<ol type="1">
+<li><p>逐点上确界函数是逐点最大函数的推广,指的是对于每个
+x，找到所有函数值的上界。具体来说，固定 x，再根据参数 y
+的范围，找到所有对应的函数值 f(x,y) 的上确界 。（前提是 f(x,y)
+对x是凸的）</p></li>
+<li><p>从上境图的角度理解，一系列函数的逐点上确界对应着这些函数上境图的交集：对于函数
+f，g 以及 A， 我们有 <span class="math display">\[
+\text{epi } g = \prod \text{epi } f(\cdot,y)
+\]</span> 函数 g 的凸性可以由一系列凸集的交集仍然是凸集得到。</p></li>
+</ol></li>
+<li><p>复合：本节给定函数 h：R<sup>n</sup> → R 以及 g：R<sup>n</sup> →
+R，定义复合函数 f = h∘g：R<sup>n</sup> → R 为 <span
+class="math display">\[
+f(x) = h(g(x)), \quad \text{dom } f = \{ x \in \text{dom } g \mid g(x)
+\in \text{dom } h \}
+\]</span> 我们考虑当函数 f 保凸或者保凹时，函数 h 和 g
+必须满足的条件。</p>
+<ol type="1">
+<li><p>标量复合：即上面定义中 k = 1 的情况。 h̃ 为函数h的扩展值延伸。</p>
+<p>如果h是凸函数且 h̃ 非减，g 是凸函数，则 f 是凸函数,</p>
+<p>如果h是凸函数且 h̃ 非增，g 是凹函数，则 f 是凸函数,</p>
+<p>如果h是凹函数且 h̃ 非减，g 是凹函数，则 f 是凹函数，</p>
+<p>如果h是凹函数且 h̃ 非增，g 是凸函数，则 f 是凹函数。</p>
+<p><strong>内外凹凸一样，外函数要非减，内外凹凸不一样，外函数要非增，最后复合函数与外函数凹凸性一致。</strong></p></li>
+<li><p>矢量复合：即定义中 k ≥ 1 的情况。</p>
+<p>如果 h 是凸函数且在每维分量上 h 非减，g<sub>i</sub> 是凸函数，则 f
+是凸函数;</p>
+<p>如果 h 是凸函数且在每维分量上 h 非增，g<sub>i</sub> 是凹函数，则 f
+是凸函数;</p>
+<p>如果 h 是凹函数且在每维分量上 h 非减，g<sub>i</sub> 是凹函数，则 f
+是凹函数;</p>
+<p>如果 h 是凹函数且在每维分量上 h 非增，g<sub>i</sub> 是凸函数，则 f
+是凹函数;</p></li>
+</ol></li>
+<li><p>最小化：当 f (x,y) 关于 x、y
+都是凸函数，<strong>C是非空凸集</strong>时，有：</p>
+<p>g (x) = <strong>inf</strong> f (x,y) （y∈C）是凸函数。</p>
+<ol type="1">
+<li>最小化与逐点上确界的区别：最小化的定义中要求 f (x,y)
+关于x、y都是凸函数；而逐点上确界仅要求 f (x,y) 关于x是凸函数。</li>
+</ol></li>
+<li><p>透视函数：给定函数 f:Rⁿ→R，则 f 的透视函数 g: Rⁿ⁺¹→R 定义为：
+<span class="math display">\[
+\begin{align*}
+g(x,t)&amp;=tf\left(\frac{x}{t}\right)&amp;
+\text{dom }g=\{(x,t)\mid\frac{x}{t}\in\text{dom }f,t &gt; 0\}
+\end{align*}
+\]</span></p>
+<ol type="1">
+<li>几何上，透视函数对应于将低维空间的图形或曲线通过投影的方式拉升到高维空间。（t
+是引入的新变量）例如，原来的函数图像在 R<sup>n</sup>
+中是一条曲线，透视变换后，它会成为在 R<sup>n+1</sup> 中的一张曲面。</li>
+<li>可以通过二阶条件证明。</li>
+</ol></li>
+</ol>
+<h5 id="共轭函数">5. 共轭函数</h5>
+<ol type="1">
+<li><p>定义：设函数 f：R<sup>n</sup> → R，定义函数
+f<sup>*</sup>：R<sup>n</sup> → R为</p>
+<p>​ f<sup>*</sup> (y) = sup (y<sup>T</sup>x - f(x)) (x 属于
+<strong>dom</strong> f)</p>
+<ol type="1">
+<li>f(x) 的共轭函数 f<sup>*</sup> (y) 表示过原点以 y 为斜率的直线与 f(x)
+差值的最大值。</li>
+<li>如果 f 可微，在满足f' (x) = y 的点 x 处差值最大。</li>
+<li>无论 f 是否是凸函数，f<sup>*</sup> 都是凸函数。</li>
+</ol></li>
+<li><p>例子：</p>
+<ol type="1">
+<li><p>仿射函数：f (x) = ax + b，</p>
+<p>当且仅当 y = a（常数）时，yx - ax - b 有界，共轭函数 <a
+href="">f<sup>*</sup></a> 定义域为单点集 {a}，f<sup>*</sup>(a)=
+-b。</p></li>
+<li><p>负对数函数：f (x)= -<em>log</em> x，定义域为 R<sub>++</sub>。</p>
+<p>当 y ≥ 0 时，函数 xy + log x 无上界；</p>
+<p>当 y &lt; 0 时，在 x = -1/y 处取最大值，<strong>dom</strong> <a
+href="">f<sup>*</sup></a> = { y|y &lt; 0}=
+-R<sub>++</sub>，f<sup>*</sup>(y) = -log (-y) - 1 (y &lt; 0)。</p></li>
+<li><p>指数函数：f (x) = e<sup>x</sup>，</p>
+<p>当 y &lt; 0 时，xy - e<sup>x</sup> 无界；</p>
+<p>当 y &gt; 0 时，在 x = log y 处取最大值，y = 0 时，f<a
+href=""><sup>*</sup></a>(y)=0，<strong>dom</strong> <a
+href="">f<sup>*</sup></a> = R<sub>+</sub>，f<sup>*</sup>(y)=y log y - y
+(规定 0 log 0 = 0)。</p></li>
+<li><p>负熵函数：f (x)=x log x，定义域为 R<sub>+</sub>， (同样规定 0 log
+0 = 0)</p>
+<p>对所有 y，xy - x log x 有上界，dom <a href="">f<sup>*</sup></a> =
+R，在 x = e<sup>(y - 1)</sup> 处取最大值，f<sup>*</sup>(y) = e<sup>(y -
+1)</sup>。</p></li>
+<li><p>反函数：f (x) = 1/x (x∈R<sub>++</sub>)，</p>
+<p>当 y &gt; 0 时，yx - 1/x 无上界；</p>
+<p>当 y = 0 时，上确界为 0；</p>
+<p>当 y &lt; 0 时，在 x = (-y)<sup>-1/2</sup> 处取上确界，<a
+href="">f<sup>*</sup></a>(y) = -2
+(-y)<sup>1/2</sup>，<strong>dom</strong> f<sup>*</sup>=
+-R<sub>+</sub>。</p></li>
+</ol></li>
+<li><p>基本性质</p>
+<ol type="1">
+<li><p>Fenchel不等式：由共轭函数定义可知：f(x) + f<sup>*</sup>(y) ≥
+x<sup>T</sup>y</p></li>
+<li><p>凸函数的共轭函数的共轭函数是原函数。</p></li>
+<li><p>可微函数 f 的共轭函数亦称为函数 f 的 Legendre 变换：</p>
+<p>设函数 f 如函数且可微，使 y<sup>T</sup>x - f(x) 最大的 x<a
+href=""><sup>*</sup></a> 满足 y = ∇f( x<a
+href=""><sup>*</sup></a>)，反之也成立。因此，如果 y = ∇f(
+x<sup>*</sup>)，我们有： <span class="math display">\[
+f^{\ast}(y) = x^{\ast T} \nabla f(x^{\ast}) - f(x^{\ast})
+\]</span></p></li>
+<li><p>仿射变换的共轭： <span class="math display">\[
+g(x) = af(x) + b \quad \longrightarrow \quad g^*(y) = af^*(y^*/a) - b
+\]</span></p></li>
+<li><p>复合仿射变换的共轭： <span class="math display">\[
+g(x) = f(Ax + b)  \quad \longrightarrow \quad g^{\ast}(y) =
+f^{\ast}(A^{-T}y) - b^{T}A^{-T}y
+\]</span></p>
+<ol type="1">
+<li>以上证明关键步骤：**sup((变量)x - f(x)) = f<sup>*</sup>(变量)**</li>
+</ol></li>
+<li><p>独立函数的和：如果函数 f(u, v) = f<sub>1</sub>(u) +
+f<sub>2</sub>(v)，其中 f<sub>1</sub> 和 f<sub>2</sub>
+使凸函数，则：f<sup><a href="">*</a></sup>(w, z) = f<sub>1</sub><sup><a
+href="">*</a></sup>(w) + f<sub>2</sub><sup><a
+href="">*</a></sup>(z)</p></li>
+</ol></li>
+</ol>
+<h5 id="拟凸函数">6. 拟凸函数</h5>
+<ol type="1">
+<li><p>定义：</p>
+<p>函数 f：R<sup>n</sup> → R 被称为拟凸函数
+，如果其定义域及所有的下水平集 S<sub>a</sub> = {x ∈ <strong>dom</strong>
+f |f (x) ≤ α} 是凸集。</p>
+<p>函数 f 是拟凹函数，如果 -f 是拟凸函数，即每个上水平集 {x ∈
+<strong>dom</strong> f |f (x) ≥ α} 是凸集。</p>
+<p>若某函数既是拟凸函数又是拟凹函数，其为拟线性函数，其定义域和所有水平集{x
+∈ <strong>dom</strong> f |f (x) = α}都是凸集。就是单调函数。</p></li>
+<li><p>基本性质：</p>
+<ol type="1">
+<li>凸函数是拟凸的：所有凸函数都是拟凸函数。</li>
+<li>局部最小值是全局最小值：对于拟凸函数，如果在某点 x
+达到局部最小值，那么它也是全局最小值。</li>
+<li>保凸性：拟凸函数的下水平集是凸的，这一性质使得拟凸函数能够被用于求解某些优化问题。</li>
+<li>变换的 Jensen 不等式：f(θx + (1 - θ)y) ≤ max{f(x),
+f(y)}。即线段中任意一点的函数值不超过其端点函数值中最大的那个。</li>
+<li>连续函数是拟凸的，则一下至少一个条件成立：
+<ol type="1">
+<li>函数 f 是非减的</li>
+<li>函数 f 是非增的</li>
+<li>存在一点 c ∈ <strong>dom</strong> f，使得对于 t ≤ c，f 非增，对于 t
+≥ c，f 非减，c 可以在全局最小点任取一个。</li>
+</ol></li>
+</ol></li>
+<li><p>可微拟凸函数</p>
+<ol type="1">
+<li><p>一阶条件：对于任意 x<sub>1</sub>，x<sub>2</sub>，如果 f
+(x<sub>1</sub>) ≤ f (x<sub>2</sub>)，则∇f (x<sub>2</sub>)ᵀ(x<sub>1</sub>
+- x<sub>2</sub>) ≤ 0</p></li>
+<li><p>二阶条件：假设函数 f 二次可微。如果函数 f 是拟凸函数，则对于任意
+x ∈ <strong>dom</strong> f以及任意 y ∈ R <sup>n</sup> 有 <span
+class="math display">\[
+y^{T}\nabla f(x) = 0 \Rightarrow y^{T}\nabla^{2} f(x)y \geq 0
+\]</span> 对于定义在 R 上的拟凸函数，上述条件可以简化为如下条件 <span
+class="math display">\[
+f^{\prime}(x) = 0 \Rightarrow f^{\prime\prime}(x) \geq 0
+\]</span>
+也就是<strong>在一阶导为0的点，二阶导必须为正</strong>；扩展到高维，即在各个方向上一阶导都为0的点，它的二阶导Hessian
+矩阵须为正定的。</p></li>
+</ol></li>
+<li><p>保拟凸运算</p>
+<ol type="1">
+<li>非负加权最大：f =
+max{w<sub>1</sub>f<sub>1</sub>，...，w<sub>m</sub>f<sub>m</sub>}</li>
+<li>复合：
+<ol type="1">
+<li>如果函数 g：R<sup>n</sup> → R是拟凸函数，且函数h：R →
+R是非减的，则复合函数 f = h∘g 是拟凸函数。</li>
+<li>和仿射函数或者线性分式函数复合：如果 f 是拟凸函数，则 g(x) = f(Ax +
+b) 是拟凸函数，且函数 g(x) = (Ax + b)/(c<sup>T</sup>x + d)
+是拟凸函数。</li>
+</ol></li>
+<li>最小化：如果函数 f(x,y) 是 x 和 y 的联合拟凸函数，且 C
+是凸集，则函数：g(x) = <strong>inf</strong> f(x,y) (y ∈ C)
+是拟凸函数。</li>
+</ol></li>
+</ol>
+<h5 id="对数-凹函数和对数-凸函数">7. 对数-凹函数和对数-凸函数</h5>
+<ol type="1">
+<li><p>定义：如果对所有的 x ∈ <strong>dom</strong> f 有 f(x) &gt; 0 且
+<em>log</em> f 是凸函数或者凹函数，则称函数对数凸或者对数凹函数。</p>
+<ol type="1">
+<li>函数是对数凸的，当且仅当 1/f 是对数凹的</li>
+</ol></li>
+<li><p>对数凸函数性质：</p>
+<ol type="1">
+<li>f(θx<sub>1 </sub> + (1 - θ)x<sub>2</sub>) ≤
+f(x<sub>1</sub>)<sup>θ</sup>f(x<sub>2</sub>)<sup>1 - θ</sup></li>
+<li><em>log</em> f(θx<sub>1 </sub> + (1 - θ)x<sub>2</sub>) ≤ θ
+<em>log</em> f(x<sub>1</sub>) + (1 - θ) <em>log</em>
+f(x<sub>2</sub>)</li>
+</ol></li>
+<li><p>例子</p>
+<ol type="1">
+<li>仿射函数：函数 f(x) = a<sup>T</sup>x + b 在{x | a<sup>T</sup>x + b
+&gt; 0} 上是<strong>对数凹函数</strong>。</li>
+<li>幂函数：函数 f(x) = x<sup>a</sup> 在 R<sub>++</sub> 上当 a ≤ 0
+是<strong>对数凸函数</strong>；当 a ≥ 0
+时是<strong>对数凹函数</strong>。</li>
+<li>指数函数：函数 f(x) = e<sup>ax</sup>
+<strong>既是对数凸函数又是对数凹函数</strong>。</li>
+</ol></li>
+<li><p>二次可微的对数-凸/凹函数：设函数 f 二次可微，其中
+<strong>dom</strong> f 是凸集，我们有 <span class="math display">\[
+\nabla^{2}\log f(x) =
+\frac{1}{f(x)}\nabla^{2}f(x)-\frac{1}{f(x)^{2}}\nabla f(x)\nabla
+f(x)^{T}
+\]</span> 事实上，函数 f 是对数 - 凸函数，当且仅当对任意
+x∈<strong>dom</strong> f，下式成立（二阶条件） <span
+class="math display">\[
+f(x)\nabla^{2}f(x) \geq \nabla f(x)\nabla f(x)^{T}
+\]</span> 函数 f 是对数 - 凹函数，当且仅当对任意 x∈<strong>dom</strong>
+f，下式成立（二阶条件） <span class="math display">\[
+f(x)\nabla^{2}f(x) \leq \nabla f(x)\nabla f(x)^{T}
+\]</span></p></li>
+<li><p>乘积、和、以及积分运算</p>
+<ol type="1">
+<li>对数-凹/对数-凸函数的乘积是对数-凹/对数-凸函数；</li>
+<li>对数-凹函数的和一般不是对数-凹函数；</li>
+<li>对数-凸函数的和仍然是对数-凸函数；</li>
+<li>对数-凹/对数-凸函数的积分是对数-凹/对数-凸函数。</li>
+</ol></li>
+</ol>
+<h4 id="凸优化问题">凸优化问题</h4>
+<h5 id="优化问题">1. 优化问题</h5>
+<ol type="1">
+<li><p>基本术语</p>
+<ol type="1">
+<li><p>基本形式： <span class="math display">\[
+\begin{align*}
+&amp;\text{minimize} &amp; f_0(x)\\
+&amp;\text{subject to} &amp; f_i(x) \leq 0, &amp; i = 1,\cdots,m\\
+&amp; &amp; h_i(x) = 0, &amp; i = 1,\cdots,p
+\end{align*}
+\]</span> 三个部分分布称为：目标函数、不等式约束、等式约束。</p>
+<p>我们称这个形式为优化问题的<strong>标准形式</strong></p></li>
+<li><p>可行域：对目标和所有约束函数有定义的点的集合。 <span
+class="math display">\[
+\mathcal{D} = \bigcap_{i = 0}^{m} \text{dom } f_i \cap \bigcap_{i =
+1}^{p} \text{dom } h_i
+\]</span> <strong>如果 D 为空集，那么原问题的最优解就是
++∞。</strong></p>
+<p>如果最优值 = -∞，则称问题无下界。</p></li>
+<li><p>ε-次优集</p>
+<p>满足 f<sub>0</sub>(x) ≤ p<sup><a href="">*</a></sup> + ε (其中 ε &gt;
+0， p<sup><a href="">*</a></sup>为最优解的函数值)  的可行解 x 称为 ε
+-次优。所有 ε -次优解的集合称为问题的 ε -次优集。</p></li>
+<li><p>极小值，局部最优</p>
+<p>我们称可行解 x 为局部最优，如果存在 R &gt; 0 使得 <span
+class="math display">\[
+f_0(x) = \inf \{ f_0(z) \mid f_i(z) \leq 0, \; i = 1,\cdots,m, \\
+h_i(z) = 0, \; i = 1,\cdots,p, \; \| z - x \|_2 \leq R \}
+\]</span> 或换言之 x 是关于 z 的优化问题 <span class="math display">\[
+\begin{align*}
+&amp;\text{minimize} &amp; f_0(z)\\
+&amp;\text{subject to} &amp; f_i(z) \leq 0, &amp; i = 1,\cdots,m\\
+&amp; &amp; h_i(z) = 0, &amp; i = 1,\cdots,p\\
+&amp; &amp; \| z - x \|_2 \leq R
+\end{align*}
+\]</span></p></li>
+</ol></li>
+</ol>
+<h5 id="等价问题">2. 等价问题</h5>
+<ol type="1">
+<li><p>变量变换：就是让 x 和 z 一一映射</p></li>
+<li><p>目标函数和约束函数的变换</p>
+<ol type="1">
+<li>目标函数：若 φ<sub>0</sub> 单调增，则 f<sub>0</sub>(x) 与
+φ<sub>0</sub>(f<sub>0</sub>(x)) 等价。</li>
+<li>不等式约束：若 φ<sub>i</sub> 满足 当且仅当 u ≤ 0 时， φ<sub>i</sub>
+(u) ≤ 0 则 f<sub>i</sub>(x) 与 φ<sub>i</sub>(f<sub>i</sub>(x))
+等价。</li>
+<li>等式约束：若 φ<sub>i</sub> 满足 当且仅当 u = 0 时， φ<sub>i</sub>
+(u) = 0 则 h<sub>i</sub>(x) 与 φ<sub>i</sub>(h<sub>i</sub>(x))
+等价。</li>
+</ol></li>
+<li><p>松弛变量：若有不等式约束 f<sub>i</sub>(x) ≤
+0，可以<strong>引入松弛变量 s<sub>i</sub> ≥ 0</strong> 使得
+f<sub>i</sub>(x) + s<sub>i</sub> = 0</p></li>
+<li><p>消除等式约束：就是通过等式约束，解出 x = φ(z) 代入即可。</p></li>
+<li><p>引入等式约束：消除等式约束的逆过程。</p></li>
+<li><p>优化部分变量：如果优化参数有多个参数，且对每个参数的约束相互独立，则可先优化部分参数，以下为例子：</p>
+<p>设变量 x∈R<sup>n</sup> 被分为 x =
+(x<sub>1</sub>，x<sub>2</sub>)，其中 x<sub>1</sub>∈R<sup>n1</sup>
+x<sub>2</sub>∈R<sup>n2</sup>，并且 n<sub>1</sub> + n<sub>2</sub> =
+n。考虑问题 <span class="math display">\[
+\begin{align*}
+&amp;\text{minimize} &amp; f_0(x_1,x_2)\\
+&amp;\text{subject to} &amp; f_{i_1}(x_1)\leq 0, &amp; i =
+1,\cdots,m_1\\
+&amp; &amp; f_{i_2}(x_2)\leq 0, &amp; i = 1,\cdots,m_2
+\end{align*}
+\]</span> 其约束相互独立，也就是说每个约束函数只与 x<sub>1</sub> 或
+x<sub>2</sub> 相关。我们首先优化 x<sub>2</sub>。定义 x<sub>1</sub>
+的函数 f<sub>0</sub> 为 <span class="math display">\[
+\tilde{f}_0(x_1) = \inf \{ f_0(x_1,z) \mid \tilde{f}(z)\leq 0, \; i =
+1,\cdots,m_2 \}
+\]</span> 则问题等价于 <span class="math display">\[
+\begin{align*}
+&amp;\text{minimize} &amp; \tilde{f}_0(x_1)\\
+&amp;\text{subject to} &amp; f_{i_1}(x_1)\leq 0, &amp; i = 1,\cdots,m_1
+\end{align*}
+\]</span></p></li>
+<li><p>上境图问题形式：标准问题的上境图形式为： <span
+class="math display">\[
+\begin{align*}
+&amp;\text{minimize} &amp; t\\
+&amp;\text{subject to} &amp; f_0(x)-t\leq 0\\
+&amp; &amp; f_i(x)\leq 0, &amp; i = 1,\cdots,m\\
+&amp; &amp; h_i(x)= 0, &amp; i = 1,\cdots,p
+\end{align*}
+\]</span>
+上境图将一个优化问题（即最小化问题）等价地转化为对一个集合的判定。</p>
+<p>几何解释：找到上境图中“最低”一点。</p></li>
+<li><p>隐式与显式约束：就是改改定义域</p></li>
+</ol>
+<h5 id="凸优化">3. 凸优化</h5>
+<ol type="1">
+<li><p>标准形式： <span class="math display">\[
+\begin{align*}
+&amp;\text{minimize} &amp; f_0(x)\\
+&amp;\text{subject to} &amp; f_i(x) \leq 0, &amp; i = 1,\cdots,m\\
+&amp; &amp; a_i^T x = b_i, &amp; i = 1,\cdots,p
+\end{align*}
+\]</span> 和普通优化问题（4.1）相比较，凸优化问题有三个条件：</p>
+<ol type="1">
+<li>目标函数必须是凸的，（如果是拟凸的，则是拟凸优化的标准形式）。</li>
+<li>不等式约束函数必须是凸的。</li>
+<li>等式约束函数 h<sub>i</sub>(x) = a<sub>i</sub><sup>T</sup>x - b
+必须是仿射的。</li>
+</ol></li>
+<li><p>性质：</p>
+<ol type="1">
+<li>凸优化问题的可行集是凸的。</li>
+<li>凸优化问题的局部最优解就是全局最优解。</li>
+</ol></li>
+<li><p>可微目标函数的最优性准则：设凸优化问题的目标函数 f<sub>0 </sub>
+是可微的，对于所有的 x, y ∈ <strong>dom</strong> f<sub>0 </sub>有 <span
+class="math display">\[
+f_0(y) \geq f_0(x)+\nabla f_0(x)^T(y - x)
+\]</span> 令 X 表示其可行集，即 <span class="math display">\[
+X = \{ x \mid f_i(x) \leq 0, \; i = 1,\cdots,m, \; h_i(x) = 0, \; i =
+1,\cdots,p \}
+\]</span> 那么，x 是最优解，当且仅当 x ∈ X 且 <span
+class="math display">\[
+\nabla f_0(x)^T(y - x) \geq 0, \quad \forall y\in X.
+\]</span> 几何解释：</p>
+<ol type="1">
+<li>当x点梯度大于0时，y就比x大，所以x处的函数值就比任意y处的函数值小，x是最优解；</li>
+<li>当x点梯度小于0时，y就比x小，所以x处的函数值就比任意y处的函数值小，x是最优解；</li>
+<li>如果 ∇f<sub>0</sub>(x) ≠ 0，那么意味着 -∇f<sub>0</sub>(x) 在 x
+处定义了可行集的一个支撑超平面。</li>
+</ol></li>
+<li><p>无约束问题：无约束问题中x是最优解的充要条件是：∇f<sub>0</sub>(x)
+= 0。</p></li>
+<li><p>只含等式约束的问题：用Lagrange乘子法：将约束问题转换为无约束问题，引入Lagrange乘子
+v，构造拉格朗日函数： <span class="math display">\[
+L(x, v) = f_0(x) + v^T(Ax - b)
+\]</span> 然后通过求解拉格朗日函数梯度为 0 的条件，得到优化条件。</p>
+<p>例子： <span class="math display">\[
+\begin{align*}
+&amp;求解凸优化问题\\
+&amp;\quad \min_{x} \quad x^2\\
+&amp;\quad \text{s.t.} \quad Ax - b=0\\
+&amp;\quad 其中A是m\times n矩阵，b是m维向量。\\
+&amp;1. 构造Lagrange函数\\
+&amp;\qquad L(x,\lambda)=x^2+\lambda^T(Ax - b)\\
+&amp;2. 求偏导数并令其为0\\
+&amp;\qquad \nabla_x L(x,\lambda)=2x+A^T\lambda =
+0，可得x=-\frac{1}{2}A^T\lambda\\
+&amp;\qquad \nabla_{\lambda} L(x,\lambda)=Ax - b =
+0，将x=-\frac{1}{2}A^T\lambda代入可得：\\
+&amp;\qquad A(-\frac{1}{2}A^T\lambda)-b = 0\\
+&amp;\qquad 解出\lambda，再代入x=-\frac{1}{2}A^T\lambda得到最优解x^*。\\
+\end{align*}
+\]</span></p></li>
+<li><p>非负象限中的极小化：凸函数在非负象限中的极小化由两种情况</p>
+<ol type="1">
+<li>最优解x处的梯度为0，</li>
+<li>最优解x处的梯度 ∇f<sub>0</sub>(x) 不为0时，∇f<sub>0</sub>(x) &gt;
+0且 x=0。</li>
+</ol></li>
+</ol>
+<h5 id="拟凸优化">4. 拟凸优化</h5>
+<ol type="1">
+<li><p>最优解条件 <span class="math display">\[
+x \in X, \quad \nabla f_0(x)^T(y - x)&gt;0, \quad \forall y \in X
+\backslash \{x\}
+\]</span> 这个条件表示：在 x 处的梯度方向不会使 f(x) 减小。</p>
+<p>与凸优化问题的不同</p>
+<ol type="1">
+<li>但这个条件为拟凸优化问题的最优性的<strong>充分条件</strong></li>
+<li>要求 ∇f<sub>0</sub>(x) 非 0</li>
+</ol></li>
+<li><p>解决拟凸优化问题的方法</p>
+<ol type="1">
+<li><p>凸可行性问题： <span class="math display">\[
+\begin{align*}
+&amp;\quad\text{find } \quad\quad\quad\quad x \\
+&amp;\text{ subject to } \quad \phi_t(x) \leq 0,\\
+&amp;\quad\quad\qquad\qquad f_i(x) \leq 0,\\
+&amp;\quad\quad\qquad\qquad Ax = b
+\end{align*}
+\]</span> 其中，φ<sub>t</sub>(x) 是拟凸函数 f(x)
+的水平集。f<sub>0</sub>(x) ≤ t ⇔ φ<sub>t</sub>(x) ≤ 0</p></li>
+<li><p>判断可行性问题的解：</p>
+<ul>
+<li>若可行，则表明拟凸优化问题的最优值p<sup>*</sup> ≤ t；</li>
+<li>若不可行，则说明p<sup>*</sup> ≥ t。</li>
+</ul></li>
+<li><p>使用二分法来调整t的值，不断缩小包含最优解的区间，从而得到拟凸优化问题的近似最优解。</p></li>
+</ol></li>
+</ol>
+<h5 id="线性规划问题">5. 线性规划问题</h5>
+<ol type="1">
+<li><p>定义：当目标函数和约束函数都是仿射时，问题称作线性规划（LP）。一般的线性规划具有以下形式：
+<span class="math display">\[
+\begin{align*}
+\text{minimize}\quad &amp; c^T x + d \\
+\text{subject to} \quad &amp; Gx \leq h \\
+&amp; Ax = b
+\end{align*}
+\]</span> 其中 G ∈ R<sup>m×n</sup>, A ∈
+R<sup>p×n</sup>。线性规划是凸优化问题。（d 常省略）</p></li>
+<li><p>标准形式与不等式形式</p>
+<ol type="1">
+<li><p>标准形式：在标准形式线性规划中仅有的不等式都是分量的非负约束 x ≥
+0： <span class="math display">\[
+\begin{align*}
+\text{minimize}\quad &amp; c^T x \\
+\text{subject to}\quad &amp; Ax = b \\
+&amp; x \geq 0
+\end{align*}
+\]</span></p></li>
+<li><p>不等式形式：如果线性规划问题没有等式约束，则称为不等式形式线性规划，常写作：
+<span class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; c^T x \\
+\text{subject to} \quad &amp; Ax \leq b
+\end{align*}
+\]</span></p></li>
+</ol></li>
+<li><p>将线性规划转换为标准形式：将一般的线性规划形式转化为标准的线性规划形式</p>
+<ol type="1">
+<li><p>第一步是为不等式引入松弛变量 s<sub>i</sub>，得到 <span
+class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; c^T x + d \\
+\text{subject to} \quad &amp; Gx + s = h \\
+&amp; Ax = b \\
+&amp; s \geq 0
+\end{align*}
+\]</span></p></li>
+<li><p>第二步是将变量 x 表示为两个<strong>非负</strong>变量
+x<sup>+</sup> 和 x<sup><strong>-</strong></sup> 的差，即 x =
+x<sup>+</sup> - x<sup><strong>-</strong></sup> ，其中 x<sup>+</sup> &gt;
+0 、 x<sup><strong>-</strong></sup> &gt; 0，从而得到问题 <span
+class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; c^T x^+ - c^T x^- + d \\
+\text{subject to} \quad &amp; Gx^+ - Gx^- + s = h \\
+&amp; Ax^+ - Ax^- = b \\
+&amp; x^+ \geq 0, \quad x^- \geq 0, \quad s \geq 0
+\end{align*}
+\]</span> 这是标准形式的线性规划，其优化变量是
+x<sup>+</sup>、x<sup><strong>-</strong></sup> 和 s 。</p></li>
+</ol></li>
+</ol>
+<h5 id="线性分式规划">6. 线性分式规划</h5>
+<ol type="1">
+<li><p>定义：在多面体上极小化仿射函数之比的问题称为线性分式规划： <span
+class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; f_0(x) \\
+\text{subject to} \quad &amp; Gx \succeq h \\
+&amp; Ax = b
+\end{align*}
+\]</span> 其目标函数由 <span class="math display">\[
+f_0(x) = \frac{c^T x + d}{e^T x + f}, \quad \text{dom} f_0 = \{x \mid
+e^T x + f &gt; 0\}
+\]</span>
+给出。这个目标函数是拟凸的（事实上是拟线性的），因此线性分式规划是一个拟凸优化问题。</p></li>
+<li><p>转化为线性规划：如果可行集 <span class="math display">\[
+\{x \mid Gx \preceq h, Ax = b, e^T x + f &gt; 0\}
+\]</span> 非空，线性分式规划可以转换为等价的线性规划 <span
+class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; c^T y + dz \\
+\text{subject to} \quad &amp; Gy - hz \preceq 0 \\
+&amp; Ay - bz = 0 \\
+&amp; e^T y + fz = 1 \\
+&amp; z \geq 0
+\end{align*}
+\]</span> 其优化变量为 y，z。</p>
+<p>为显示这个等价性，我们首先说明如果 x 是线性分式规划的可行解，那么
+<span class="math display">\[
+y = \frac{x}{e^T x + f}, \quad z = \frac{1}{e^T x + f}，\quad x =
+\frac{y}{z}
+\]</span> 是线性规划的可行解，且具有相同的目标函数值 c<sup>T</sup>y + dz
+= f<sub>0</sub>(x)。</p></li>
+</ol>
+<h5 id="二次优化问题">7. 二次优化问题</h5>
+<ol type="1">
+<li><p>定义：当凸优化问题的目标函数是(凸)二次型并且约束函数为仿射时，该问题称为二次规划（<strong>QP</strong>）。二次规划可以表述为
+<span class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; (1/2)x^T P x + q^T x + r \\
+\text{subject to} \quad &amp; Gx \preceq h \\
+&amp; Ax = b
+\end{align*}
+\]</span> 本质是在二次规划问题中，在多面体上极小化一个凸二次函数。</p>
+<p>如果不仅目标函数，其不等式约束也是(凸)二次型，该问题称为二次约束二次规划（<strong>QCQP</strong>）。二次约束二次规划可以表述为
+<span class="math display">\[
+\begin{align*}
+\underset{x}{\text{minimize}} \quad &amp; (1/2)x^T P_0 x + q_0^T x + r_0
+\\
+\text{subject to} \quad &amp; (1/2)x^T P_i x + q_i^T x + r_i \leq 0,
+\quad i = 1, \ldots, m \\
+&amp; Ax = b
+\end{align*}
+\]</span> 本质是在椭圆的交集构成的可行集上极小化凸二次函数。</p></li>
+</ol>
+<h5 id="几何规划">8. 几何规划</h5>
+<p>几何规划的自然形式并<strong>不是凸的</strong>。但通过变量替换或目标函数、约束函数的变换，<strong>可以将它们转换为凸优化问题。</strong></p>
+<ol type="1">
+<li><p>单项式与正项式</p>
+<ol type="1">
+<li><p>单项式定义：函数 f：R<sup>n</sup> → R，<strong>dom</strong> f =
+R<sup>n</sup><sub>++</sub> 定义为 <span class="math display">\[
+f(x) = c x_1^{a_1} x_2^{a_2} \cdots x_n^{a_n}, \quad c &gt; 0, \quad a_i
+\in \mathbb{R}
+\]</span> 它被称为单项式函数或简称为单项式。单项式的指数 a<sub>i</sub>
+可以是任意实数，包括分数或负数，但系数 c 必须非负。</p></li>
+<li><p>正项式定义:单项式的和是正项式函数（或简称为正项式）： <span
+class="math display">\[
+f(x) = \sum_{k = 1}^{K} c_k x_1^{a_{1k}} x_2^{a_{2k}} \cdots
+x_n^{a_{nk}}, \quad c_k &gt; 0
+\]</span></p></li>
+</ol></li>
+<li><p>几何规划（<strong>GP</strong>）形式： <span
+class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; f_0(x) \\
+\text{subject to} \quad &amp; f_i(x) \leq 1, \quad i = 1, \ldots, m \\
+&amp; h_i(x) = 1, \quad i = 1, \ldots, p
+\end{align*}
+\]</span> 被称为几何规划（<strong>GP</strong>）其中
+f<sub>0</sub>，...，f<sub>m</sub>
+为正项式，h<sub>1</sub>，...，h<sub>p</sub> 为单项式，这个问题定义域为 D
+= R<sup>n</sup><sub>++</sub>， 约束 x ＞ 0 式隐式的。</p></li>
+<li><p>几何规划转换为凸优化</p>
+<p>几何规划(一般)不是凸优化问题，但是通过变量代换以及目标、约束函数的转换，它们可以被转换为凸问题。本质是优化问题的等价变换：变量变换+复合变换。</p>
+<ol type="1">
+<li><p>单项式转换方法：我们用 y<sub>i</sub> = <em>log</em> x<sub>i</sub>
+定义变量，因此 x<sub>i</sub> = e<sup>y<sub>i</sub></sup> 。</p>
+<p>如果 f 是 x 的单项式函数，即： <span class="math display">\[
+f(x) = c x_1^{a_1} x_2^{a_2} \cdots x_n^{a_n}
+\]</span> 那么 <span class="math display">\[
+\begin{align*}
+f(x) &amp;= f(e^{y_1}, \ldots, e^{y_n}) \\
+&amp;= c (e^{y_1})^{a_1} \cdots (e^{y_n})^{a_n} \\
+&amp;= e^{a^T y + b}
+\end{align*}
+\]</span> 其中 <strong>b = <em>log</em> c，变量变换 y<sub>i</sub> =
+<em>log</em> x<sub>i</sub></strong>
+，将一个单项式函数转换为以仿射函数为指数的函数。</p></li>
+<li><p>正项式转换方法：类似的，如果 f 是正项式，即 <span
+class="math display">\[
+f(x) = \sum_{k = 1}^{K} c_k x_1^{a_{1k}} x_2^{a_{2k}} \cdots
+x_n^{a_{nk}}
+\]</span> 于是 <span class="math display">\[
+f(x) = \sum_{k = 1}^{K} e^{a_k^T y + b_k}
+\]</span> 其中a<sub>k</sub> = (a<sub>1k</sub>，...，a<sub>2k</sub>)
+b<sub>k</sub> = <em>log</em> c<sub>k</sub>，变量变换 y<sub>i</sub> =
+<em>log</em> x<sub>i</sub>
+，将正项式函数转换为以仿射函数为指数的函数的和。</p></li>
+<li><p>几何规划问题的转换</p>
+<p>几何规划用新变量 y 表示： <span class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; \sum_{k = 1}^{K_0} e^{a_{0k}^T y + b_{0k}}
+\\
+\text{subject to} \quad &amp; \sum_{k = 1}^{K_i} e^{a_{ik}^T y + b_{ik}}
+\leq 1, \quad i = 1, \ldots, m \\
+&amp; \sum_{k = 1}^{K_i} e^{a_{ik}^T y + b_{ik}} = 1, \quad i = 1,
+\ldots, p
+\end{align*}
+\]</span> 其中 a<sup>ik</sup> ∈R<sup>n</sup>，i =
+0，...，m，包含了以正项式为指数的不等式约束，g<sub>i</sub>
+∈R<sup>n</sup>，i =
+0，...，p，包含了原几何规划中以单项式为指数的等式约束。</p>
+<p>采用对数函数将目标函数和约束函数进行转换，得到问题： <span
+class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; \tilde{f}_0(y) = \log \left(\sum_{k =
+1}^{K_0} e^{a_{0k}^T y + b_{0k}}\right) \\
+\text{subject to} \quad &amp; \tilde{f}_i(y) = \log \left(\sum_{k =
+1}^{K_i} e^{a_{ik}^T y + b_{ik}}\right) \leq 0, \quad i = 1, \ldots, m
+\\
+&amp; \tilde{h}_i(y) = g_i^T y + h_{i0} = 0, \quad i = 1, \ldots, p
+\end{align*}
+\]</span> 因为函数 f<sub>i</sub> 是凸的 h<sub>i</sub>
+是仿射的，所以该问题是一个凸优化问题。我们称其为凸形式的几何规划。为将其与原始的几何规划相区别，我们称原本的含正项式的为正项式形式的几何规划。</p></li>
+</ol></li>
+</ol>
+<h4 id="对偶">对偶</h4>
+<h5 id="language-函数">1. Language 函数</h5>
+<ol type="1">
+<li><p>Language：考虑标准形式的优化问题： <span class="math display">\[
+\begin{align*}
+&amp;\text{minimize} &amp; f_0(x)\\
+&amp;\text{subject to} &amp; f_i(x) \leq 0, &amp; i = 1,\cdots,m\\
+&amp; &amp; h_i(x) = 0, &amp; i = 1,\cdots,p
+\end{align*}
+\]</span> 这里没有假设问题是凸优化问题。</p>
+<p>其Language函数定义为： <span class="math display">\[
+L(x, \lambda, \nu) = f_0(x) + \sum_{i = 1}^{m} \lambda_i f_i(x) +
+\sum_{i = 1}^{p} \nu_i h_i(x)
+\]</span> λ<sub>i</sub> 称为第 i 个不等式约束 f<sub>i</sub>(x) ≤ 0
+对应的 <strong>Language乘子</strong>，v<sub>i</sub> 称为第 i
+个不等式约束 h<sub>i</sub>(x) = 0 对应的
+<strong>Language乘子</strong>。向量 λ 和 v 称为对偶变量或者是问题的
+<strong>Language乘子向量</strong></p>
+<p>拉格朗日函数的目标是通过引入乘数将约束 “惩罚”
+融入到目标函数中。具体来说，λ 和 v 为调整各约束 “惩罚” 权重的因子：</p>
+<ul>
+<li>当约束 f<sub>i</sub>(x) ≤ 0 被破坏（即 f<sub>i</sub>(x) ≥
+0）时，对应的项 λ<sub>i</sub>f<sub>i</sub>(x)
+对函数值产生负面影响。</li>
+<li>当约束 h<sub>i</sub>(x) = 0 不成立（即 h<sub>i</sub>(x) ≠ 0）时，项
+v<sub>i</sub>h<sub>i</sub>(x) 亦产生偏移。</li>
+</ul></li>
+</ol>
+<h5 id="language-对偶函数">2. Language 对偶函数</h5>
+<ol type="1">
+<li><p>定义：为 Language 函数关于 x 取得的最小值 <span
+class="math display">\[
+g(\lambda, \nu) = \inf_{x \in D} L(x, \lambda, \nu) = \inf_{x \in D}
+\left( f_0(x) + \sum_{i = 1}^{m} \lambda_i f_i(x) + \sum_{i = 1}^{p}
+\nu_i h_i(x) \right)
+\]</span> 如果 Language 函数关于 x 无下界，则对偶函数取值为
+-∞。因为对偶函数是一族关于 (λ , v)
+的仿射函数的逐点下确界，所以即使原问题不是凸的，<strong>对偶函数也是凸函数</strong>。</p></li>
+<li><p>最优值的下界：对偶函数构成了原问题最优值 p<sup>*</sup>
+的下界:即对任意 λ ≥ 0和 v 下式成立: <span class="math display">\[
+g(\lambda, \nu) \leq p^*
+\]</span> 设 x 是原问题一个可行解，即 f<sub>i</sub>(x) ≤ 0 且
+h<sub>i</sub>(x) = 0 根据假设，λ<sub>i</sub> ≥ 0，我们有： <span
+class="math display">\[
+\sum_{i = 1}^{m} \lambda_i f_i(x) + \sum_{i = 1}^{p} \nu_i h_i(x) \leq 0
+\]</span> 称满足 λ ≥ 0 以及 (λ , v) ∈ <strong>dom</strong> g 即 g (λ ,
+v) &gt; -∞ 的 (λ , v) 是<strong>对偶可行</strong>的。</p></li>
+<li><p>Lagrange对偶函数和共轭函数</p>
+<p>回忆共轭函数定义： <span class="math display">\[
+f^*(y) = \sup_{x \in \text{dom} f} (y^T x - f(x))
+\]</span> 考虑一个优化问题，具有线性不等式和等式约束： <span
+class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; f_0(x) \\
+\text{subject to} \quad &amp; Ax \preceq b \\
+&amp; Cx = d
+\end{align*}
+\]</span> 利用函数 f<sub>0</sub>
+的共轭函数，我们可以将问题的对偶函数表述为 <span class="math display">\[
+\begin{align*}
+g(\lambda, \nu) &amp;= \inf_{x} \left( f_0(x) + \lambda^T (Ax - b) +
+\nu^T (Cx - d) \right) \\
+&amp;= -b^T \lambda - d^T \nu + \inf_{x} \left( f_0(x) + (A^T \lambda +
+C^T \nu)^T x \right) \\
+&amp;= -b^T \lambda - d^T \nu - f_0^*(-A^T \lambda - C^T \nu)
+\end{align*}
+\]</span> 函数 g 的定义域也可以由 f<sub>0</sub><sup>*</sup>
+的定义域得到： <span class="math display">\[
+\text{dom } g = \{ (\lambda, \nu) \mid -A^T \lambda - C^T \nu \in
+\text{dom } f_0^* \}
+\]</span></p></li>
+</ol>
+<h5 id="lagrange对偶问题">3. Lagrange对偶问题</h5>
+<ol type="1">
+<li><p>定义：Lagrange 对偶函数给出了优化问题的最优值
+p*的一个下界。那么Lagrange
+对偶函数的<strong>最大值</strong>就是原问题的最好下界。</p>
+<p>所以Lagrange 对偶问题为： <span class="math display">\[
+\begin{align*}
+\text{maximize} \quad &amp; g(\lambda, \nu) \\
+\text{subject to} \quad &amp; \lambda \succeq 0
+\end{align*}
+\]</span> 对偶可行的 (λ , v)
+是对偶问题的一个可行解。称最优解为<strong>对偶最优解</strong>或者<strong>最优
+Language 乘子</strong>。</p></li>
+<li><p>标准形式线性规划的Language对偶</p>
+<p>标准形式线性规划 <span class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; c^T x \\
+\text{subject to} \quad &amp; Ax = b \\
+&amp; x \geq 0
+\end{align*}
+\]</span> 的 Lagrange 对偶函数为 <span class="math display">\[
+g(\lambda, \nu) =
+\begin{cases}
+- b^T \nu &amp; A^T \nu - \lambda + c = 0 \\
+-\infty &amp; \text{其他情况}
+\end{cases}
+\]</span> 所以对偶问题为 <span class="math display">\[
+\begin{align*}
+\text{maximize} \quad &amp; g(\lambda, \nu) =
+\begin{cases}
+- b^T \nu &amp; A^T \nu - \lambda + c = 0 \\
+-\infty &amp; \text{其他情况}
+\end{cases}\\
+\text{subject to} \quad &amp; \lambda \geq 0
+\end{align*}
+\]</span> 该问题等式约束条件为隐式的，写成显示表达对偶约束为： <span
+class="math display">\[
+\begin{align*}
+\text{maximize} \quad &amp; - b^T \nu \\
+\text{subject to} \quad &amp; A^T \nu - \lambda + c = 0 \\
+&amp; \lambda \geq 0
+\end{align*}
+\]</span> 可进一步简化为 <span class="math display">\[
+\begin{align*}
+\text{maximize} \quad &amp; - b^T \nu \\
+\text{subject to} \quad &amp; A^T \nu + c \geq 0
+\end{align*}
+\]</span></p></li>
+<li><p>不等式形式线性规划的 Lagrange 对偶</p>
+<p>不等式形式的线性规划问题 <span class="math display">\[
+\begin{align*} \underset{x}{\text{minimize}} \quad &amp; c^T x \\
+\text{subject to} \quad &amp; Ax \leq b \end{align*}
+\]</span> Lagrange函数为 <span class="math display">\[
+L(x, \lambda) = c^T x + \lambda^T (Ax - b) = -b^T \lambda+(A^T \lambda +
+c)^T x,
+\]</span> 对偶函数为 <span class="math display">\[
+g(\lambda)=\inf_{x} L(x, \lambda)=-b^T \lambda+\inf_{x}(A^T \lambda +
+c)^T x.
+\]</span> 若线性函数不是恒值，则线性函数的下确界是
+-∞，因此上述问题的对偶函数为 <span class="math display">\[
+g(\lambda) =  \begin{cases} - b^T \lambda &amp; A^T \lambda + c = 0 \\
+-\infty &amp; \text{其他情况} \end{cases}
+\]</span> 显式表达对偶可行的条件并作为约束来重新描述对偶问题： <span
+class="math display">\[
+\begin{align*} {\text{maximize}} \quad &amp; -b^T \lambda \\
+\text{subject to} \quad &amp; A^T \lambda + c = 0 \\ &amp; \lambda \geq
+0, \end{align*}
+\]</span>
+我们注意到标准形式线性规划和不等式形式线性规划以及它们的对偶问题之间的有趣的对称性，标准形式线性规划的对偶问题是只含有不等式约束的线性规划问题，反之亦然。</p></li>
+</ol>
+<h5 id="对偶性">4. 对偶性</h5>
+<ol type="1">
+<li><p>弱对偶性：Language 对偶问题的最优值，我们用 d<sup><a
+href="">*</a></sup> 表示，根据定义，这是通过 Language
+函数得到原问题最优值 p<sup>*</sup>
+的最好下界。特别的，我们有下面简单但是非常重要的不等式 <span
+class="math display">\[
+d^* \leq p^*
+\]</span>
+即使原问题不是凸问题，上述不等式亦成立。这个性质被称为<strong>弱对偶性</strong>。</p>
+<p>定义差值 p<sup><a href="">*</a></sup> - d<sup>*</sup>
+是原问题的<strong>最优对偶间隙</strong>。</p></li>
+<li><p>强对偶性：如果等式 d<sup><a href="">*</a></sup> = p<sup>*</sup>
+成立，即最优对偶间隙为零，那么<strong>强对偶性</strong>成立。这说明从
+Language 对偶函数得到的最好下界是紧的。</p></li>
+<li><p>Slater
+约束准则：一般强对偶性不成立，但是，如果目标函数是凸函数，不等式约束函数是凸函数，等式约束函数是仿射函数，即
+<span class="math display">\[
+\begin{align*}
+&amp;\text{minimize} &amp; f_0(x)\\
+&amp;\text{subject to} &amp; f_i(x) \leq 0, &amp; i = 1,\cdots,m\\
+&amp; &amp; a_i^T x = b_i, &amp; i = 1,\cdots,p
+\end{align*}
+\]</span>
+除此之外还需要满足一些强对偶性条件，这些条件称为<strong>约束准则</strong>。</p>
+<ol type="1">
+<li>一个简单的约束准则是 <strong>Slater 约束准则</strong>：存在一点 x ∈
+relint D 使得式 f<sub>i</sub>(x) &lt; 0
+成立，即不等式约束严格成立。</li>
+<li><strong>弱化的Slater约束准则</strong>：简言之，当约束函数
+f<sub>i</sub> 是仿射函数时，不等式约束不需要严格成立，但当约束函数
+f<sub>i</sub>
+不是仿射函数时，不等式约束需要严格成立。称为弱化的Slater约束准则。</li>
+</ol></li>
+</ol>
+<h5 id="几何解释">5. 几何解释</h5>
+<ol type="1">
+<li></li>
+</ol>
+<h5 id="鞍点解释">6. 鞍点解释</h5>
+<ol type="1">
+<li><p>定义：我们称 w̃ ∈ W，z̃ ∈ Z 是函数 f（以及 W 和
+Z）的鞍点，如果对于任意 w ∈ W，z ∈ Z 下式成立 <span
+class="math display">\[
+f(\overline w, z) \leq f(\overline w,\overline z) \leq f(w,\overline z)
+\]</span> 换言之，f(w, z̃) 在 w̃ 处取得最小值（关于变量 w ∈ W），f(w̃, z)
+在 z̃ 处取得最大值（关于变量 z ∈ Z）： <span class="math display">\[
+f(\tilde{w}, \hat{z}) = \inf_{w \in W} f(w, \hat{z})\quad
+f(\tilde{w}, \hat{z}) = \sup_{z \in Z} f(\tilde{w}, z)
+\]</span> 上式意味着强极大极小性质成立 <span class="math display">\[
+\sup_{z \in Z} \inf_{w \in W} f(w, z) = \inf_{w \in W} \sup_{z \in Z}
+f(w, z)
+\]</span> 且共同值为 f(w̃, z̃)。</p></li>
+<li><p>关于 Language 对偶：如果 x<a href="">*</a> 和 λ<a href="">*</a>
+是原问题和对偶问题的最优点，且强对偶性成立，则它们是 Language
+函数的一个鞍点。反之亦然。</p></li>
+</ol>
+<h5 id="最优性条件">7. 最优性条件</h5>
+<ol type="1">
+<li><p>互补松弛性：如果强对偶性成立，在原问题最优点 x* 处有 <span
+class="math display">\[
+\sum_{i = 1}^{m} \lambda_i^* f_i(x^*) = 0.
+\]</span> 事实上，求和项的每一项都非正，因此有 <span
+class="math display">\[
+\lambda_i^* f_i(x^*) = 0. \quad i = 1,\cdots,m
+\]</span> 上述条件称为<strong>互补松弛性</strong>：它对任意原问题最优解
+x<a href="">*</a>以及对偶问题最优解( λ<a href="">*</a> , v*)
+成立（当强对偶性成立时）。我们也可以将其写成 <span
+class="math display">\[
+\lambda_i^* &gt; 0 \quad \Rightarrow \quad f_i(x^*) = 0,
+\]</span> 或 <span class="math display">\[
+f_i(x^*) &lt; 0 \quad \Rightarrow \quad \lambda_i^* = 0.
+\]</span> 上式意味着在最优点处，除了第 i 个约束起作用的情况，最优
+Language 乘子的第 i 项都为零。</p></li>
+<li><p>KKT最优性条件</p>
+<ol type="1">
+<li><p>非凸问题的KKT条件：和前面一样，令 x<a href="">*</a> 和 ( λ<a
+href="">*</a> , v<a href="">*</a>)
+分别是原问题和对偶问题的某对最优解，对偶间隙为零。因为 L( x<a
+href="">*</a>, λ<a href="">*</a> , v<a href="">*</a>) 关于 x 求极小在
+x<a href="">*</a> 处取得最小值，因此函数在 x<a href="">*</a>
+处的导数必须为零，即 <span class="math display">\[
+\nabla f_0(x^*) + \sum_{i = 1}^{m} \lambda_i^* \nabla f_i(x^*) + \sum_{i
+= 1}^{p} \nu_i^* \nabla h_i(x^*) = 0
+\]</span> 因此，我们有 <span class="math display">\[
+\begin{align*} f_i(x^*) &amp;\leq 0, \quad i = 1, \ldots, m \\ h_i(x^*)
+&amp;= 0, \quad i = 1, \ldots, p \\ \lambda_i^* &amp;\geq 0, \quad i =
+1, \ldots, m \\
+\lambda_i^* f_i(x^*) &amp;= 0, \quad i = 1, \ldots, m \quad(互补松弛性)
+\\
+&amp;\nabla f_0(x^*) + \sum_{i = 1}^{m} \lambda_i^* \nabla f_i(x^*) +
+\sum_{i = 1}^{p} \nu_i^* \nabla h_i(x^*) = 0
+\end{align*}
+\]</span> 我们称上式为Karush - Kuhn - Tucker (KKT)条件。
+总之，如果<strong>强对偶性</strong>成立，那么任意一对原问题和对偶问题的最优解必须满足
+KKT 条件。</p></li>
+<li><p>凸问题的KKT条件：<strong>满足KKT条件的点一定是</strong>原问题和对偶问题的<strong>最优解。</strong>
+（而在非凸问题中，KKT条件只是必要条件）</p></li>
+</ol></li>
+</ol>
+<h4 id="数学知识">数学知识</h4>
+<h5 id="范数">1. 范数</h5>
+<ol type="1">
+<li><p>范数具有如下性质： <span class="math display">\[
+\begin{align*}
+&amp;
+1. \|x\| \geq 0，且 \|x\| = 0 的充分必要条件是 x = 0；\\&amp;
+2. \|\lambda x\| = |\lambda| \cdot \|x\|（对于任意 \lambda \in
+\mathbb{R}）；\\&amp;
+3. \|x + y\| \leq \|x\| + \|y\|（三角不等式），\\&amp;
+以及 Cauchy - Schwarz 不等式 \\&amp;
+|\langle x,y\rangle| \leq \|x\| \cdot \|y\|，
+且等号成立的充分必要条件是：x 与 y 共线，即存在 \lambda，使得 x =
+\lambda y。\\&amp;
+将不等式写成分量形式为：\\&amp;
+\left|\sum_{i = 1}^{n} x_i y_i\right| \leq \left(\sum_{i = 1}^{n}
+x_i^2\right)^{\frac{1}{2}} \left(\sum_{i = 1}^{n}
+y_i^2\right)^{\frac{1}{2}}\\&amp;
+\end{align*}
+\]</span></p></li>
+<li><p>常见的范数：</p>
+<ol type="1">
+<li><p>P - 范数： <span class="math display">\[
+\|x\|_p = \left(\sum_{i = 1}^{n} |x_i|^p\right)^{\frac{1}{p}} \quad (1
+\leq p &lt; \infty)\\
+\]</span></p></li>
+<li><p>1 - 范数： <span class="math display">\[
+\|x\|_p = \sum_{i = 1}^{n} |x_i|\\
+\]</span></p></li>
+<li><p>2 - 范数： <span class="math display">\[
+\|x\|_2 = \left(\sum_{i = 1}^{n} x_i^2\right)^{\frac{1}{2}}\\
+\]</span></p></li>
+<li><p>∞ - 范数：</p></li>
+</ol>
+<p><span class="math display">\[
+\|x\|_{\infty} = \max_{1 \leq i \leq n} |x_i|
+\]</span></p></li>
+<li><p>对偶范数：定义如下 <span class="math display">\[
+\| y \|_* = \sup_{\| x \| \leq 1} y^T x
+\]</span></p>
+<ol type="1">
+<li>1 - 范数的对偶范数是 ∞ - 范数</li>
+<li>2 - 范数的对偶范数是 2 - 范数</li>
+<li>∞ - 范数的对偶范数是 1 - 范数</li>
+</ol></li>
+</ol>
+<h4 id="题目总结">题目总结</h4>
+<h5 id="将问题转换为线性规划">1. 将问题转换为线性规划</h5>
+<ol type="1">
+<li><p><span class="math display">\[
+\begin{align*}
+\min_{X\in\mathbb{R}^n}\|AX - b\|_1&amp;=\min_{X\in\mathbb{R}^n}\sum_{i
+= 1}^{n}|AX_i - b|
+=\min_{\substack{X\in\mathbb{R}^n\\z\in\mathbb{R}^n}}\sum_{i =
+1}^{n}z_i\\
+\text{subject to}&amp;\quad -z\leq AX - b\leq z
+\end{align*}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\left\| x \right\|_{\infty} \leq 1 \Rightarrow - 1 \leq x \leq 1
+\]</span></p></li>
+<li><p><span class="math display">\[
+\begin{align*}
+\min_{X\in\mathbb{R}^n}\|X\|_{\infty}=\min_{X\in\mathbb{R}^n}\max_{(i)}\left(|x_i|\right)=\min_{\substack{\\t\in\mathbb{R_+}}}\sum_{i
+= 1}^{n}t\\
+\text{subject to}
+\quad -t\mathbf{1} \leq X \leq t\mathbf{1}
+\end{align*}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\begin{align*}
+\min_{X\in\mathbb{R}^n}\sum_{i = 1}^{m}\max\{0,a_i^T x + b_i\}\
+=\min_{\substack{X\in\mathbb{R}^n\\z\in\mathbb{R_+}^n}}\sum_{i =
+1}^{m}z_i\\
+\text{subject to}\quad z_i\geq a_i^T x + b_i
+\end{align*}
+\]</span></p></li>
+</ol>
+<h5 id="验证是凸集">2. 验证是凸集</h5>
+<ol type="1">
+<li>验证 λx<sub>1</sub> + (1-λ)x<sub>2</sub> ∈ S</li>
+</ol>
+<h5 id="验证是凸函数">3. 验证是凸函数</h5>
+<ol type="1">
+<li><p>Hesse矩阵 <span class="math display">\[
+H(f)=\begin{pmatrix} \frac{\partial^{2}f}{\partial
+x_{1}^{2}}&amp;\frac{\partial^{2}f}{\partial x_{1}\partial
+x_{2}}&amp;\cdots&amp;\frac{\partial^{2}f}{\partial x_{1}\partial
+x_{n}}\\ \frac{\partial^{2}f}{\partial x_{2}\partial
+x_{1}}&amp;\frac{\partial^{2}f}{\partial
+x_{2}^{2}}&amp;\cdots&amp;\frac{\partial^{2}f}{\partial x_{2}\partial
+x_{n}}\\ \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+\frac{\partial^{2}f}{\partial x_{n}\partial
+x_{1}}&amp;\frac{\partial^{2}f}{\partial x_{n}\partial
+x_{2}}&amp;\cdots&amp;\frac{\partial^{2}f}{\partial x_{n}^{2}}
+\end{pmatrix}
+\]</span> 证明 H(f) 是半正定的即可验证是凸函数（二阶条件）</p>
+<ol type="1">
+<li>计算 Hesse 矩阵的 H(f) 特征值。对于矩阵A，其特征值 λ 满足
+<strong>det(A - λI) = 0</strong>，其中 I
+是单位矩阵。如果所有特征值λ<sub>i</sub> ≥ 0，则 H(f)
+矩阵是半正定的，函数是 f 凸函数。</li>
+<li>定义法：证明对于任意非零向量 x，x<sup>T</sup>Ax ≥ 0。</li>
+</ol></li>
+</ol>
+<h5 id="jensen-不等式的证明">4. Jensen 不等式的证明</h5>
+<ol type="1">
+<li>数学归纳法：从 m 到 m+1 的关键步骤： <span class="math display">\[
+\begin{align*}
+&amp; f(\lambda_1 x^{(1)} + \lambda_2 x^{(2)} + \cdots + \lambda_m
+x^{(m)} + \lambda_{m + 1} x^{(m + 1)}) \\
+&amp; = f\left( \sum_{i = 1}^{m} \lambda_i \left(
+\frac{\lambda_1}{\sum_{i = 1}^{m} \lambda_i} x^{(1)} +
+\frac{\lambda_2}{\sum_{i = 1}^{m} \lambda_i} x^{(2)} + \cdots +
+\frac{\lambda_m}{\sum_{i = 1}^{m} \lambda_i} x^{(m)} \right) +
+\lambda_{m + 1} x^{(m + 1)} \right)
+\end{align*}
+\]</span> 记 <span class="math display">\[
+\hat{x} = \sum_{i = 1}^{m} \frac{\lambda_1}{\sum_{i = 1}^{m} \lambda_i}
+x^{(1)} + \sum_{i = 1}^{m} \frac{\lambda_2}{\sum_{i = 1}^{m} \lambda_i}
+x^{(2)} + \cdots + \sum_{i = 1}^{m} \frac{\lambda_m}{\sum_{i = 1}^{m}
+\lambda_i} x^{(m)}
+\]</span> 再利用凸函数的定义即可解决。</li>
+</ol>
+<h5 id="求共轭函数">5. 求共轭函数</h5>
+<ol type="1">
+<li><p>建立共轭函数表达式，分情况讨论（一般根据 y 值）。下给例题：</p>
+<ol type="1">
+<li><p>这一题根据 y 分类。 <span class="math display">\[
+\begin{flalign}
+&amp;求下列函数的共轭函数：最大值函数：f(x)=\max x_{i}。
+\\&amp;若\|y\|_{1} \leq 1且y \geq
+0，则y与x内积时不会改变x分量的符号，且一定成立
+y^{T} x \leq \max x_{i},
+故此时f^{*}(y)=0。
+\\&amp;若不然，则或有\|y\|_{1}&gt;1。不妨设j=\arg \max
+x_{i}且y_{j}=1+\delta(\delta&gt;0且
+其他坐标取0)，那么
+\\&amp; \qquad f^{*}(y)=\sup \left\{y^{T} x - x_{j}\right\}
+\\&amp; \qquad =\sup \left\{\delta x_{j}\right\}
+\\&amp; \qquad \rightarrow \infty。
+\\&amp;又或存在i使得y_{i}&lt;0，类似可证f^{*}(y)不存在。
+\\&amp;综上，f^{*}(y)=0，定义域是\left\{y \in \mathbb{R}^{n} | y \geq
+0,\|y\|_{1} \leq 1\right\}。
+\end{flalign}
+\]</span></p></li>
+<li><p>这题既有 y 分类，也有 x 分类，注意最后结论需要考虑 x 所有取值。
+<span class="math display">\[
+\begin{flalign}
+&amp;对于f(x) = |x|：       
+\\&amp;当x\geqslant0时，f^*(y)=\sup_{x\geqslant0}(xy -
+x)=\sup_{x\geqslant0}x(y - 1)。
+\\&amp; \quad 如果y&gt;1，则当x\to+\infty时，x(y -
+1)\to+\infty，所以f^*(y)=+\infty。
+\\&amp; \quad 如果y\leqslant1，则x(y - 1)\leqslant0，上确界为0。        
+\\&amp;当x&lt;0时，f^*(y)=\sup_{x&lt;0}(xy + x)=\sup_{x&lt;0}x(y + 1)。
+\\&amp; \quad 如果y&lt; - 1，则当x\to-\infty时，x(y +
+1)\to+\infty，所以f^*(y)=+\infty。
+\\&amp; \quad 如果y\geqslant - 1，则x(y + 1)\leqslant0，上确界为0。
+\\&amp;综合起来，f^*(y)=\left\{\begin{matrix}0, &amp;|y|\leqslant1\\
++\infty, &amp;|y|&gt;1\end{matrix}\right.
+\end{flalign}
+\]</span></p></li>
+</ol></li>
+<li><p>求导方式求sup(y<sup>T</sup>x - f(x))。下给例题： <span
+class="math display">\[
+\begin{flalign}
+&amp;证明  计算 f(x) = \frac{1}{2}\|x\|^{2} 的共轭函数 f^*(y)
+\\&amp;对于函数 f(x) = \frac{1}{2}\|x\|^{2}，共轭函数的定义是：
+\\&amp; \qquad f^*(y) = \sup_{x\in\mathbb{R}^{n}} \left( \langle y,x
+\rangle - \frac{1}{2}\|x\|^{2} \right)
+\\&amp;展开目标函数：\langle y,x \rangle - \frac{1}{2}\|x\|^{2} =
+\langle y,x \rangle - \frac{1}{2} \sum_{i = 1}^{n} x_{i}^{2}
+\\&amp;对 x 求导并令其为零： \frac{\partial}{\partial x} \left( \langle
+y,x \rangle - \frac{1}{2}\|x\|^{2} \right) = y - x = 0
+\\&amp;因此，最优解为 x = y。将 x = y 代入原目标函数：
+\\&amp;f^*(y) = \langle y,y \rangle - \frac{1}{2}\|y\|^{2} =
+\frac{1}{2}\|y\|^{2}
+\\&amp;因此， f^*(y) = \frac{1}{2}\|y\|^{2}。
+\end{flalign}
+\]</span></p></li>
+</ol>
+<h5 id="转换为标准几何规划">6. 转换为标准几何规划</h5>
+<ol type="1">
+<li>注意标准几何规划，用指数形式，＝1，≤ 1： <span
+class="math display">\[
+\begin{align*}
+\text{minimize} \quad &amp; f_0(x,y) = \frac{x}{y} &amp;
+{\text{minimize}} \quad &amp; f_0(x,y) = x^{-1}y\\
+\text{subject to} \quad &amp; 1 \leq x \leq 4 &amp; \text{subject to}
+\quad &amp; x^{-1} \leq 1 ,\quad\frac{1}{4}x \leq 1\\
+&amp; x^2 \leq y^2 &amp;&amp; x^2y^{-2} \leq 1\\
+&amp; \frac{x}{y^3} = 3 &amp;&amp; \frac{1}{3}xy^{-3} = 1\\
+\end{align*}
+\]</span></li>
+</ol>
+<h5 id="求对偶问题">7. 求对偶问题</h5>
+<ol type="1">
+<li>构建拉格朗日函数，求对偶函数（分类讨论和求导），Lagrange
+对偶函数的最大值就是原问题的最好下界。（注意把求对偶问题的分类条件放入约束条件）。
+<span class="math display">\[
+\begin{align*}
+\text{maximize} \quad &amp; g(\lambda, \nu) \\
+\text{subject to} \quad &amp; \lambda \succeq 0
+\end{align*}
+\]</span></li>
+</ol>
+<h5 id="求kkt条件与最优解">8. 求KKT条件与最优解</h5>
+<ol type="1">
+<li><p>自带的约束条件，λ ≥ 0，互补松弛性。求导等于0： <span
+class="math display">\[
+\begin{align*} f_i(x^*) &amp;\leq 0, \quad i = 1, \ldots, m \\ h_i(x^*)
+&amp;= 0, \quad i = 1, \ldots, p \\ \lambda_i^* &amp;\geq 0, \quad i =
+1, \ldots, m \\
+\lambda_i^* f_i(x^*) &amp;= 0, \quad i = 1, \ldots, m \quad(互补松弛性)
+\\
+&amp;\nabla f_0(x^*) + \sum_{i = 1}^{m} \lambda_i^* \nabla f_i(x^*) +
+\sum_{i = 1}^{p} \nu_i^* \nabla h_i(x^*) = 0
+\end{align*}
+\]</span> 注意：</p>
+<ol type="1">
+<li>求导等于0这里，如果有多个变量，则分别列多个等式，每个等式是对某个变量求导。</li>
+<li>λ 是针对不等式约束的，没有不等式约束就没有 λ ≥ 0 和互补松弛性。</li>
+</ol></li>
+<li><p>最优解：简单方法，直接代入看一下目标值即可。</p></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>笔记</tag>
+        <tag>AI</tag>
       </tags>
   </entry>
 </search>
