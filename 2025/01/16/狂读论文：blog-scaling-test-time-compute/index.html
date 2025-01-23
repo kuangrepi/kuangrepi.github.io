@@ -19,27 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"kuangrepi.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="上下标 12&lt;sub&gt;下标&lt;&#x2F;sub&gt;&lt;sup&gt;上标&lt;&#x2F;sup&gt; 一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式  包含：⊆ 等价于：⇔ 任意：∀ lambda λ （笑死了，一直以为是lamda，被周志华的组误导了） 求和：∑ 连乘：∏ 梯度：∇ 复合：∘ h̃，w̃，z̃，θ，φ">
+    <meta name="description" content="原博客连接：https:&#x2F;&#x2F;huggingface.co&#x2F;spaces&#x2F;HuggingFaceH4&#x2F;blogpost-scaling-test-time-compute 英语单词  scaling 扩展 scalable 可扩展的 Over the last few years, the scaling of train-time compute has dominated the pr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown常见基础符号">
-<meta property="og:url" content="https://kuangrepi.github.io/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/index.html">
+<meta property="og:title" content="狂读论文：blog-scaling-test-time-compute">
+<meta property="og:url" content="https://kuangrepi.github.io/2025/01/16/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9Ablog-scaling-test-time-compute/index.html">
 <meta property="og:site_name" content="Kuangrepi的博客">
-<meta property="og:description" content="上下标 12&lt;sub&gt;下标&lt;&#x2F;sub&gt;&lt;sup&gt;上标&lt;&#x2F;sup&gt; 一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式  包含：⊆ 等价于：⇔ 任意：∀ lambda λ （笑死了，一直以为是lamda，被周志华的组误导了） 求和：∑ 连乘：∏ 梯度：∇ 复合：∘ h̃，w̃，z̃，θ，φ">
+<meta property="og:description" content="原博客连接：https:&#x2F;&#x2F;huggingface.co&#x2F;spaces&#x2F;HuggingFaceH4&#x2F;blogpost-scaling-test-time-compute 英语单词  scaling 扩展 scalable 可扩展的 Over the last few years, the scaling of train-time compute has dominated the pr">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-12-23T11:41:24.000Z">
-<meta property="article:modified_time" content="2024-12-30T09:08:57.134Z">
+<meta property="article:published_time" content="2025-01-16T12:51:38.000Z">
+<meta property="article:modified_time" content="2025-01-19T14:01:13.701Z">
 <meta property="article:author" content="Kuangrepi">
-<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://kuangrepi.github.io/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/">
+<link rel="canonical" href="https://kuangrepi.github.io/2025/01/16/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9Ablog-scaling-test-time-compute/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://kuangrepi.github.io/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/","path":"2024/12/23/Markdown常见基础符号/","title":"Markdown常见基础符号"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://kuangrepi.github.io/2025/01/16/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9Ablog-scaling-test-time-compute/","path":"2025/01/16/狂读论文：blog-scaling-test-time-compute/","title":"狂读论文：blog-scaling-test-time-compute"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Markdown常见基础符号 | Kuangrepi的博客</title>
+<title>狂读论文：blog-scaling-test-time-compute | Kuangrepi的博客</title>
   
 
 
@@ -125,7 +125,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -138,6 +138,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D"><span class="nav-number">1.</span> <span class="nav-text">英语单词</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -191,7 +192,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/">
+    <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2025/01/16/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9Ablog-scaling-test-time-compute/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -204,12 +205,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Markdown常见基础符号 | Kuangrepi的博客">
+      <meta itemprop="name" content="狂读论文：blog-scaling-test-time-compute | Kuangrepi的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Markdown常见基础符号
+          狂读论文：blog-scaling-test-time-compute
         </h1>
 
         <div class="post-meta-container">
@@ -220,14 +221,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2024-12-23 19:41:24" itemprop="dateCreated datePublished" datetime="2024-12-23T19:41:24+08:00">2024-12-23</time>
+      <time title="Created: 2025-01-16 20:51:38" itemprop="dateCreated datePublished" datetime="2025-01-16T20:51:38+08:00">2025-01-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-12-30 17:08:57" itemprop="dateModified" datetime="2024-12-30T17:08:57+08:00">2024-12-30</time>
+      <time title="Modified: 2025-01-19 22:01:13" itemprop="dateModified" datetime="2025-01-19T22:01:13+08:00">2025-01-19</time>
     </span>
 
   
@@ -246,21 +247,107 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><ol type="1">
-<li><p>上下标</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;sub&gt;下标&lt;/sub&gt;</span><br><span class="line">&lt;sup&gt;上标&lt;/sup&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式</p>
+    <div class="post-body" itemprop="articleBody"><p>原博客连接：https://huggingface.co/spaces/HuggingFaceH4/blogpost-scaling-test-time-compute</p>
+<h4 id="英语单词">英语单词</h4>
 <ol type="1">
-<li>包含：⊆</li>
-<li>等价于：⇔</li>
-<li>任意：∀</li>
-<li>lambda λ （笑死了，一直以为是lamda，被周志华的组误导了）</li>
-<li>求和：∑</li>
-<li>连乘：∏</li>
-<li>梯度：∇</li>
-<li>复合：∘</li>
-<li>h̃，w̃，z̃，θ，φ</li>
-</ol></li>
+<li><p>scaling 扩展 scalable 可扩展的</p>
+<p><em>Over the last few years, the <strong>scaling</strong> of
+train-time compute has dominated the progress of large language models
+(LLMs).</em></p></li>
+<li><p>paradigm 模式</p></li>
+<li><p>clusters 集群</p></li>
+<li><p>on the horizon 即将</p></li>
+<li><p>complementary 补充的</p></li>
+<li><p>inference 推理</p></li>
+<li><p>optimally 最佳的，优化的 optimise 优化</p></li>
+<li><p>iterative 迭代的 iteration 迭代</p></li>
+<li><p>self-refinement 自优化</p></li>
+<li><p>allocate 分配</p></li>
+<li><p>rival 匹敌</p></li>
+<li><p>outperform 胜过</p></li>
+<li><p>prompt 提示词</p></li>
+<li><p>counterpart 对应的人或事物</p>
+<p><em>By adaptively allocating test-time compute per prompt, smaller
+models can rival—and sometimes even outperform—their larger, more
+resource-intensive counterparts.</em></p></li>
+<li><p>constrained 有限的</p></li>
+<li><p>implementation 实现</p></li>
+<li><p>verifier 验证，验证器</p></li>
+<li><p>benchmark 基准测试</p></li>
+<li><p>ingredients 成分</p></li>
+<li><p>subsequent 后续的</p></li>
+<li><p>built-in 内置的</p></li>
+<li><p>mechanism 机制</p></li>
+<li><p>candidate 候选人，候选者</p></li>
+<li><p>sample 采样</p></li>
+<li><p>intermediate 中间的</p></li>
+<li><p>fine-grained 细粒的，详细的，深入的</p></li>
+<li><p>split 拆分</p></li>
+<li><p>overall 整体的</p></li>
+<li><p>diagram 图解</p></li>
+<li><p>derivation 推导</p></li>
+<li><p>PRM 过程奖励模型 ORM 结果奖励模型</p></li>
+<li><p>terminate 结束，终止</p></li>
+<li><p>parameter 参数</p></li>
+<li><p>unsaturated 不饱和性</p></li>
+<li><p>variance 方差</p></li>
+<li><p>incorporate 纳入，包含</p></li>
+<li><p>self-consistency 自洽</p></li>
+<li><p>aggregate 聚合 in aggregate 总的来说</p></li>
+<li><p>quirk 怪癖</p></li>
+<li><p>eval 评估</p></li>
+<li><p>subtlety 微妙之处</p></li>
+<li><p>convert 转换</p></li>
+<li><p>subtract 减去</p></li>
+<li><p>canonical 标准，典型</p></li>
+<li><p>plateau 平稳的</p></li>
+<li><p>approximately 大约 approximation 近似</p></li>
+<li><p>plausible 貌似合理的，似乎可信的</p></li>
+<li><p>variant 变体</p></li>
+<li><p>weighted 加权的</p></li>
+<li><p>identical 相同的</p></li>
+<li><p>prioritise 优先考虑</p></li>
+<li><p>concatenation 连接，拼接</p></li>
+<li><p>extract 提取</p></li>
+<li><p>cumulative 累计的</p></li>
+<li><p>literature 文献</p></li>
+<li><p>product 乘积</p></li>
+<li><p>vanilla 普通的</p></li>
+<li><p>fall short of 未达到</p></li>
+<li><p>criterion 标准</p></li>
+<li><p>partial 部分的</p></li>
+<li><p>token 标记</p></li>
+<li><p>verify 验证</p></li>
+<li><p>hyperparameter 超参数</p></li>
+<li><p>tradeoff 权衡取舍</p></li>
+<li><p>distribution 分布</p></li>
+<li><p>bin...into 将...分为</p></li>
+<li><p>quintiles 五等分</p></li>
+<li><p>assign 分配</p></li>
+<li><p>heuristic 启发式方法</p></li>
+<li><p>oracle 预言机</p></li>
+<li><p>ground truth 通过直接观察获得的信息</p></li>
+<li><p>intuition 直觉</p></li>
+<li><p>collapse 坍塌</p></li>
+<li><p>prompt 促使，提示</p></li>
+<li><p>modification 修改</p></li>
+<li><p>kick in 开始起作用</p></li>
+<li><p>manifest 体现</p></li>
+<li><p>optimal 最优</p></li>
+<li><p>fade in 消失</p></li>
+<li><p>surpass 超过</p></li>
+<li><p>leverage 利用</p></li>
+<li><p>robustness 鲁棒性</p></li>
+<li><p>holy grail 圣杯</p></li>
+<li><p>validate 验证</p></li>
+<li><p>fine-tuning 微调</p></li>
+<li><p>nuanced 细微的</p></li>
+<li><p>sheds light on 阐明</p></li>
+<li><p>integrate 集成</p></li>
+<li><p>incorporate 纳入，包含</p></li>
+<li><p>explicit 明确的</p></li>
+<li><p>resemble 类似于</p></li>
+<li><p>inherently 本质上地</p></li>
 </ol>
 
     </div>
@@ -270,21 +357,39 @@
     
 
     <footer class="post-footer">
+          <div class="reward-container">
+  <div>给我认可与动力</div>
+  <button>
+    打赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="Kuangrepi 微信支付">
+        <span>微信支付</span>
+      </div>
+      <div>
+        <img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="Kuangrepi 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
           <div class="post-tags">
-              <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"></i> Markdown</a>
+              <a href="/tags/AI/" rel="tag"><i class="fa fa-tag"></i> AI</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/12/23/%E6%9C%80%E4%BC%98%E5%8C%96%E5%AF%BC%E8%AE%BA%E6%80%BB%E7%BB%93/" rel="prev" title="最优化导论总结">
-                  <i class="fa fa-angle-left"></i> 最优化导论总结
+                <a href="/2024/12/26/Typora%E6%80%8E%E4%B9%88%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3/" rel="prev" title="Typora怎么打开多个窗口">
+                  <i class="fa fa-angle-left"></i> Typora怎么打开多个窗口
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/12/26/Typora%E6%80%8E%E4%B9%88%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3/" rel="next" title="Typora怎么打开多个窗口">
-                  Typora怎么打开多个窗口 <i class="fa fa-angle-right"></i>
+                <a href="/2025/01/23/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9ATest-time-Computing-from-System-1-Thinking-to-System-2-Thinking/" rel="next" title="狂读论文：Test-time Computing- from System-1 Thinking to System-2 Thinking">
+                  狂读论文：Test-time Computing- from System-1 Thinking to System-2 Thinking <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
