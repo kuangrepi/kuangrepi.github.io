@@ -25,16 +25,32 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/12/17/hello-world/</url>
-    <content><![CDATA[<p>​
-在距离期末周还有2周时，我建立了自己的博客网站，之前卡住没搞好主要因为hexo
-init 一直卡住。</p>
-<p>​ 以后看看能不能更新技术文章吧，但是我是菜鸡。</p>
-<p><img src="/images/hello-world/菜的安详.jpg" /></p>
+    <title>hexo有关的简单指令</title>
+    <url>/2024/12/17/hexo%E6%9C%89%E5%85%B3%E7%9A%84%E7%AE%80%E5%8D%95%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<h5
+id="这里记录一下更新hexo需要的东西以免以后忘了"><strong>这里记录一下更新</strong>hexo需要的东西，以免以后忘了。</h5>
+<h3 id="文章有关指令">文章有关指令：</h3>
+<h4 id="建立新文章">建立新文章：</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new (文章标题)</span><br></pre></td></tr></table></figure>
+<h4 id="文章添加图片方法1全局文件夹">文章添加图片方法1：全局文件夹</h4>
+<ol type="1">
+<li><p>在resourse文件夹下添加一个叫images的文件夹（叫什么都行），在里面放入文章所需图片。</p></li>
+<li><p>使用md语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![显示给别人看的图片下标](/images/图片名字.jpg &quot;自己看的备注&quot;) #注意&quot;自己看的备注&quot;前面有个空格</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="预览与上传">预览与上传：</h4>
+<ol type="1">
+<li><p>预览指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
+<li><p>更新上传指令（更新完记得 CTRL + f5
+强制更新网页，不然可能显示不出来更新后结果）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g # 编译</span><br><span class="line">hexo d # 上传</span><br></pre></td></tr></table></figure></li>
+<li><p>如果线上还是不更新，在编译上传之前先清除缓存</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></li>
+</ol>
 ]]></content>
       <tags>
-        <tag>碎碎念</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -49,154 +65,6 @@ init 一直卡住。</p>
 ]]></content>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>狂读论文：Test-time Computing- from System-1 Thinking to System-2 Thinking</title>
-    <url>/2025/01/23/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9ATest-time-Computing-from-System-1-Thinking-to-System-2-Thinking/</url>
-    <content><![CDATA[<h4 id="英语单词">英语单词</h4>
-<ol type="1">
-<li>modification 改良</li>
-<li>calibration 校准</li>
-<li>modality 模态，形式</li>
-<li>scarcity 稀缺</li>
-<li>computational 计算的</li>
-<li>shortcoming 缺点</li>
-<li>intuitive 直觉的</li>
-<li>inference 推理</li>
-<li>perceptual 概念的</li>
-<li>pattern 模式</li>
-<li>assumption 假定</li>
-<li>generalization 泛化</li>
-<li>leverages 利用</li>
-<li>steer 引导</li>
-<li>modify 修改</li>
-<li>calibrate 校准</li>
-<li>preliminary 初步的</li>
-<li>decompose 分解</li>
-<li>simulate 模拟</li>
-<li>remainder 其余部分</li>
-<li>deliberate 深思熟虑的</li>
-<li>perceptual 感知的</li>
-<li>explicitly 明确的，显式的</li>
-<li>incrementally 逐步的</li>
-<li>be prone to 容易，倾向于</li>
-<li>empirical 实证的，经验主义的</li>
-<li>cumulative 累计的</li>
-<li>etrieval-augmented 搜索增强的</li>
-<li>mitigate 减轻</li>
-<li>utilize 利用</li>
-<li>finetune 微调</li>
-<li>taxonomy 分类</li>
-<li>distribution 分布</li>
-<li>obtain 获得</li>
-<li>optimization 优化</li>
-<li>algorithm 算法</li>
-<li>auxiliary 辅助的</li>
-<li>entropy 熵</li>
-<li>marginal 边际的</li>
-<li>pitfalls 陷阱</li>
-<li>trivial 微不足道的</li>
-<li>regulation 规则化</li>
-<li>multilingual 多语言的</li>
-<li>cross-modal 跨模态的</li>
-<li>retrieval 检索</li>
-<li>caption 字幕</li>
-<li>scenarios 场景</li>
-<li>normalization 归一化</li>
-<li>propagation 传播</li>
-<li>covariance 协方差</li>
-<li>gradient 梯度</li>
-<li>catastrophic 灾难性的</li>
-<li>episodic 情节的</li>
-<li>latency 延迟</li>
-<li>incremental 增量的</li>
-<li>exponential 指数的</li>
-<li>incorporate 结合</li>
-<li>stem from 源于</li>
-<li>in-context 上下文的</li>
-<li>selection 选择</li>
-<li>objective 目标</li>
-<li>empirical 实证的</li>
-<li>semantically 语义上地</li>
-<li>descending 降序的</li>
-<li>implicit 隐式的</li>
-<li>Bayesian 贝叶斯</li>
-<li>sequentical 顺序的</li>
-<li>annotation 注释 annotate 注释</li>
-<li>subsequent 后续的</li>
-<li>traversal 遍历的</li>
-<li>bottleneck 瓶颈</li>
-<li>externalize 外化</li>
-<li>steering 指导的</li>
-<li>residual 残差的</li>
-<li>alleviate 降低</li>
-<li>hallucination 幻觉</li>
-<li>toxicity 毒性</li>
-<li>compromise 影响</li>
-<li>calibrate 校准</li>
-<li>contextual 上下文的</li>
-<li>transferability 可移植性</li>
-<li>component 组成部分</li>
-<li>alignment 对齐</li>
-<li>rationale 理由</li>
-<li>critique 评论</li>
-<li>verbal-based 基于语言的</li>
-<li>interpretability 可解释性</li>
-<li>pairwise 成对的</li>
-<li>revision 修改</li>
-<li>coherence 连贯性</li>
-<li>alignment 对齐性</li>
-<li>consistency 一致性</li>
-<li>biase 偏差</li>
-<li>perplexity 困惑</li>
-<li>mitigate 减轻</li>
-<li>annotation 符号</li>
-<li>criteria 批评</li>
-<li>distill 提炼</li>
-<li>unify ... into 统一成</li>
-<li>align ... with 符合</li>
-<li>verify 验证</li>
-<li>ensemble 集成</li>
-<li>vanilla 普通的</li>
-<li>validation 验证</li>
-<li>executable 可执行的</li>
-<li>variant 变体</li>
-<li>surpass 超过</li>
-<li>prune 修剪</li>
-<li>threshold 阈值</li>
-<li>intrinsic 内部的</li>
-<li>scalability 可扩展性</li>
-<li>template 模板</li>
-<li>synthetic 合成的</li>
-<li>substantial 实质性的</li>
-<li>be susceptible to 容易受到...的影响</li>
-<li>adversarial 对抗性的</li>
-<li>stance 立场</li>
-<li>topological 拓扑的</li>
-<li>sparse 稀疏的</li>
-<li>be inferior to 比...差</li>
-<li>consensus 共识</li>
-<li>arithmetic 算术的</li>
-<li>degradation 下降</li>
-<li>controversial 争议性的</li>
-<li>guaranteed 保证的</li>
-<li>oracle 预言</li>
-<li>decouple 解耦</li>
-<li>aforementioned 前面提到的</li>
-<li>manually 手动的</li>
-<li>trajectory 轨迹</li>
-<li>parallel 并行的</li>
-<li>heuristic 启发式的</li>
-<li>conjecture 猜想</li>
-<li>multimoda 多模态</li>
-<li>cache 缓存</li>
-<li>compression 压缩</li>
-<li>speculative 推理的</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -307,6 +175,19 @@ resource-intensive counterparts.</em></p></li>
 ]]></content>
       <tags>
         <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/12/17/hello-world/</url>
+    <content><![CDATA[<p>​
+在距离期末周还有2周时，我建立了自己的博客网站，之前卡住没搞好主要因为hexo
+init 一直卡住。</p>
+<p>​ 以后看看能不能更新技术文章吧，但是我是菜鸡。</p>
+<p><img src="/images/hello-world/菜的安详.jpg" /></p>
+]]></content>
+      <tags>
+        <tag>碎碎念</tag>
       </tags>
   </entry>
   <entry>
@@ -1724,6 +1605,154 @@ class="math display">\[
       </tags>
   </entry>
   <entry>
+    <title>狂读论文：Test-time Computing- from System-1 Thinking to System-2 Thinking</title>
+    <url>/2025/01/23/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9ATest-time-Computing-from-System-1-Thinking-to-System-2-Thinking/</url>
+    <content><![CDATA[<h4 id="英语单词">英语单词</h4>
+<ol type="1">
+<li>modification 改良</li>
+<li>calibration 校准</li>
+<li>modality 模态，形式</li>
+<li>scarcity 稀缺</li>
+<li>computational 计算的</li>
+<li>shortcoming 缺点</li>
+<li>intuitive 直觉的</li>
+<li>inference 推理</li>
+<li>perceptual 概念的</li>
+<li>pattern 模式</li>
+<li>assumption 假定</li>
+<li>generalization 泛化</li>
+<li>leverages 利用</li>
+<li>steer 引导</li>
+<li>modify 修改</li>
+<li>calibrate 校准</li>
+<li>preliminary 初步的</li>
+<li>decompose 分解</li>
+<li>simulate 模拟</li>
+<li>remainder 其余部分</li>
+<li>deliberate 深思熟虑的</li>
+<li>perceptual 感知的</li>
+<li>explicitly 明确的，显式的</li>
+<li>incrementally 逐步的</li>
+<li>be prone to 容易，倾向于</li>
+<li>empirical 实证的，经验主义的</li>
+<li>cumulative 累计的</li>
+<li>etrieval-augmented 搜索增强的</li>
+<li>mitigate 减轻</li>
+<li>utilize 利用</li>
+<li>finetune 微调</li>
+<li>taxonomy 分类</li>
+<li>distribution 分布</li>
+<li>obtain 获得</li>
+<li>optimization 优化</li>
+<li>algorithm 算法</li>
+<li>auxiliary 辅助的</li>
+<li>entropy 熵</li>
+<li>marginal 边际的</li>
+<li>pitfalls 陷阱</li>
+<li>trivial 微不足道的</li>
+<li>regulation 规则化</li>
+<li>multilingual 多语言的</li>
+<li>cross-modal 跨模态的</li>
+<li>retrieval 检索</li>
+<li>caption 字幕</li>
+<li>scenarios 场景</li>
+<li>normalization 归一化</li>
+<li>propagation 传播</li>
+<li>covariance 协方差</li>
+<li>gradient 梯度</li>
+<li>catastrophic 灾难性的</li>
+<li>episodic 情节的</li>
+<li>latency 延迟</li>
+<li>incremental 增量的</li>
+<li>exponential 指数的</li>
+<li>incorporate 结合</li>
+<li>stem from 源于</li>
+<li>in-context 上下文的</li>
+<li>selection 选择</li>
+<li>objective 目标</li>
+<li>empirical 实证的</li>
+<li>semantically 语义上地</li>
+<li>descending 降序的</li>
+<li>implicit 隐式的</li>
+<li>Bayesian 贝叶斯</li>
+<li>sequentical 顺序的</li>
+<li>annotation 注释 annotate 注释</li>
+<li>subsequent 后续的</li>
+<li>traversal 遍历的</li>
+<li>bottleneck 瓶颈</li>
+<li>externalize 外化</li>
+<li>steering 指导的</li>
+<li>residual 残差的</li>
+<li>alleviate 降低</li>
+<li>hallucination 幻觉</li>
+<li>toxicity 毒性</li>
+<li>compromise 影响</li>
+<li>calibrate 校准</li>
+<li>contextual 上下文的</li>
+<li>transferability 可移植性</li>
+<li>component 组成部分</li>
+<li>alignment 对齐</li>
+<li>rationale 理由</li>
+<li>critique 评论</li>
+<li>verbal-based 基于语言的</li>
+<li>interpretability 可解释性</li>
+<li>pairwise 成对的</li>
+<li>revision 修改</li>
+<li>coherence 连贯性</li>
+<li>alignment 对齐性</li>
+<li>consistency 一致性</li>
+<li>biase 偏差</li>
+<li>perplexity 困惑</li>
+<li>mitigate 减轻</li>
+<li>annotation 符号</li>
+<li>criteria 批评</li>
+<li>distill 提炼</li>
+<li>unify ... into 统一成</li>
+<li>align ... with 符合</li>
+<li>verify 验证</li>
+<li>ensemble 集成</li>
+<li>vanilla 普通的</li>
+<li>validation 验证</li>
+<li>executable 可执行的</li>
+<li>variant 变体</li>
+<li>surpass 超过</li>
+<li>prune 修剪</li>
+<li>threshold 阈值</li>
+<li>intrinsic 内部的</li>
+<li>scalability 可扩展性</li>
+<li>template 模板</li>
+<li>synthetic 合成的</li>
+<li>substantial 实质性的</li>
+<li>be susceptible to 容易受到...的影响</li>
+<li>adversarial 对抗性的</li>
+<li>stance 立场</li>
+<li>topological 拓扑的</li>
+<li>sparse 稀疏的</li>
+<li>be inferior to 比...差</li>
+<li>consensus 共识</li>
+<li>arithmetic 算术的</li>
+<li>degradation 下降</li>
+<li>controversial 争议性的</li>
+<li>guaranteed 保证的</li>
+<li>oracle 预言</li>
+<li>decouple 解耦</li>
+<li>aforementioned 前面提到的</li>
+<li>manually 手动的</li>
+<li>trajectory 轨迹</li>
+<li>parallel 并行的</li>
+<li>heuristic 启发式的</li>
+<li>conjecture 猜想</li>
+<li>multimoda 多模态</li>
+<li>cache 缓存</li>
+<li>compression 压缩</li>
+<li>speculative 推理的</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网站开发过程吐槽</title>
     <url>/2024/12/18/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E5%90%90%E6%A7%BD/</url>
     <content><![CDATA[<ol type="1">
@@ -1738,35 +1767,6 @@ class="math display">\[
 <p>这尼玛谁想得到，试麻了。</p></li>
 </ol></li>
 <li><p>百度爬虫太幽默了，先不说因为疯狂爬github导致了不能用github.io的域名，我换了个域名，然后你验证失败，连接不上服务器，莫名其妙了。</p></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo有关的简单指令</title>
-    <url>/2024/12/17/hexo%E6%9C%89%E5%85%B3%E7%9A%84%E7%AE%80%E5%8D%95%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<h5
-id="这里记录一下更新hexo需要的东西以免以后忘了"><strong>这里记录一下更新</strong>hexo需要的东西，以免以后忘了。</h5>
-<h3 id="文章有关指令">文章有关指令：</h3>
-<h4 id="建立新文章">建立新文章：</h4>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new (文章标题)</span><br></pre></td></tr></table></figure>
-<h4 id="文章添加图片方法1全局文件夹">文章添加图片方法1：全局文件夹</h4>
-<ol type="1">
-<li><p>在resourse文件夹下添加一个叫images的文件夹（叫什么都行），在里面放入文章所需图片。</p></li>
-<li><p>使用md语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![显示给别人看的图片下标](/images/图片名字.jpg &quot;自己看的备注&quot;) #注意&quot;自己看的备注&quot;前面有个空格</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="预览与上传">预览与上传：</h4>
-<ol type="1">
-<li><p>预览指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
-<li><p>更新上传指令（更新完记得 CTRL + f5
-强制更新网页，不然可能显示不出来更新后结果）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g # 编译</span><br><span class="line">hexo d # 上传</span><br></pre></td></tr></table></figure></li>
-<li><p>如果线上还是不更新，在编译上传之前先清除缓存</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <tags>
