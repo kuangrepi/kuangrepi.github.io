@@ -145,7 +145,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -185,6 +185,474 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2025/02/24/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9ADeepSeek-R1%20Incentivizing%20Reasoning%20Capability%20in%20LLMs%20via%20Reinforcement%20Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kuangrepi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuangrepi的博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuangrepi的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/24/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9ADeepSeek-R1%20Incentivizing%20Reasoning%20Capability%20in%20LLMs%20via%20Reinforcement%20Learning/" class="post-title-link" itemprop="url">狂读论文：DeepSeek-R1 Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-02-24 15:19:37" itemprop="dateCreated datePublished" datetime="2025-02-24T15:19:37+08:00">2025-02-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-03-02 17:28:31" itemprop="dateModified" datetime="2025-03-02T17:28:31+08:00">2025-03-02</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4
+id="内容总结参考博客httpsbruceyuan.compostdeepseek-r1-paper-reading-notes.html">内容总结（参考博客https://bruceyuan.com/post/deepseek-r1-paper-reading-notes.html）</h4>
+<ol type="1">
+<li><p>基于过程的奖励模型、强化学习、以及搜索算法，如蒙特卡罗树搜索
+和束搜索。然而，这些方法都未能达到与 OpenAI 的 o1
+系列模型在通用推理能力上的同等水平。</p></li>
+<li><p>本研究首次尝试使用纯强化学习来提升语言模型的推理能力。探索 LLM
+在没有任何监督数据的情况下开发推理能力的潜力，重点关注其通过纯 RL
+流程实现的自我演化。</p></li>
+<li><p>这篇 Paper 一共介绍了三个重要的模型：</p>
+<ul>
+<li>DeepSeek-R1-Zero
+<ul>
+<li>结论是只用 RL 就可以提升模型效果，非常具有启发性。</li>
+</ul></li>
+<li>DeepSeek-R1
+<ul>
+<li>Reasoner 模型很强很强。</li>
+<li>通过多阶段的训练，相对于只用 RL，可以进一步提升模型效果。</li>
+</ul></li>
+<li>DeepSeek-R1-Distill 的系列模型
+<ul>
+<li>结论是：在小模型上，在【大模型上进行蒸馏】效果会好于【用 R1
+的方式做训练】。</li>
+</ul></li>
+</ul></li>
+<li><p>Deepseek-R1-Zero</p>
+<ul>
+<li>回答问题的格式要符合以下格式
+<ul>
+<li>思考的步骤要包含在
+<code>&lt;think&gt;思考过程&lt;/think&gt;</code>。</li>
+<li>最终的结果要包含在
+<code>&lt;answer&gt;最终结果&lt;/answer&gt;</code>。</li>
+<li>并且需要让模型先思考，然后再问题。</li>
+</ul></li>
+<li>强化学习
+<ul>
+<li>使用 GRPO 强化学习算法。</li>
+<li>奖励有两种
+<ul>
+<li>最终结果的精确奖励。模型最终输出的答案是否正确。</li>
+<li>中间格式的格式奖励。模型是否先输出
+<code>&lt;think&gt;xxx&lt;/think&gt;</code>，然后输出<code>&lt;answer&gt;xxx&lt;/answer&gt;</code>
+这样的格式。</li>
+</ul></li>
+</ul></li>
+<li>模型在 RL 的催化下自我进化的能力。具体是指：
+<ul>
+<li>越训练，模型的思考越长，输出的 token 越多。</li>
+<li>模型会在中间的思考过程中出现【反思、纠正、重新评估、重新探索】等行为增强模型思考和解决问题的能力。</li>
+</ul></li>
+</ul></li>
+<li><p>Deepseek-R1</p>
+<ul>
+<li><p>收集 long-cot 数据作为冷启动数据来监督微调</p></li>
+<li><p>增加语言一致的奖励</p></li>
+<li><p>拒绝采样收集 SFT 数据（推理以及非推理数据）</p></li>
+<li><p>全场景强化学习：</p>
+<ul>
+<li><p>对于推理数据，我们还是和 <code>deepseek-r1-zero</code>
+一样，采用规则奖励的模型作奖励信息训练。</p>
+<p>对于非推理数据，我们采用 <code>reward-model</code>
+作为奖励信号，这是为了捕获细微场景的人类偏好</p></li>
+</ul></li>
+<li><p>优点</p>
+<ul>
+<li>可读性提高：语言一致</li>
+<li>推理能力更强</li>
+<li>有用性与无害性</li>
+</ul></li>
+</ul></li>
+<li><p>Deepseek-R1-Distill</p>
+<ul>
+<li>方式1：直接用 deepseek-r1 蒸馏数据，让小模型学习（SFT）。</li>
+<li>方式2：小模型采用 <code>deepseek-r1</code> 同样的 pipeline
+作训练，获得这样的能力。</li>
+<li>最终的结果看，蒸馏的效果好于直接用小模型作RL训练。</li>
+</ul></li>
+<li><p>不成功的尝试</p>
+<ol type="1">
+<li>过程奖励模型 (Process Reward Model, PRM)
+<ul>
+<li>难以明确定义细粒度步骤：在通用推理任务中，很难显式地定义每一步的细节。</li>
+<li>中间步骤的正确性难以判断：确定当前中间步骤是否正确是一个挑战。使用模型进行自动标注往往无法得到理想结果，而人工标注则难以扩展。</li>
+<li>奖励黑客问题 (Reward Hacking)：一旦引入基于模型的
+PRM，就不可避免地会出现奖励黑客现象 (Gao et al.,
+2022)。此外，重新训练奖励模型需要额外的训练资源，使整个训练管道更加复杂。</li>
+</ul></li>
+<li>Monte Carlo Tree Search（MCTS）
+<ul>
+<li>在语言模型中，词表太大了，基本都十几K，因此搜索空间太大了。</li>
+<li>如果采用最大的探索限制，又容易产生局部最优。</li>
+<li>value model 很难训练，不好评估当前的步骤是否是好的。</li>
+</ul></li>
+</ol></li>
+</ol>
+<h4 id="英语单词">英语单词</h4>
+<ol type="1">
+<li>preliminary 初始的</li>
+<li>cold-start data
+冷启动数据：模型首次启动时来帮助其进入工作状态的数据</li>
+<li>distilled from 由...蒸馏得到</li>
+<li>diminish 减少</li>
+<li>component 组成部分</li>
+<li>align with 与...一致</li>
+<li>minimal 最少的</li>
+<li>reasoning-oriented 面向推理的</li>
+<li>convergence 收敛</li>
+<li>rejection sampling 拒绝采样</li>
+<li>validate 验证</li>
+<li>incentivize 激励</li>
+<li>inclusion 包含</li>
+<li>constraint 约束</li>
+<li>trajectory 轨迹</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2025/02/22/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9AScaling%20LLM%20Test-Time%20Compute%20Optimally%20can%20be%20More%20Effective%20than%20Scaling%20Model%20Parameters/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kuangrepi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuangrepi的博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuangrepi的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/22/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9AScaling%20LLM%20Test-Time%20Compute%20Optimally%20can%20be%20More%20Effective%20than%20Scaling%20Model%20Parameters/" class="post-title-link" itemprop="url">狂读论文：Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-02-22 15:45:56" itemprop="dateCreated datePublished" datetime="2025-02-22T15:45:56+08:00">2025-02-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-02-24 21:15:10" itemprop="dateModified" datetime="2025-02-24T21:15:10+08:00">2025-02-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="内容总结">内容总结</h4>
+<ol type="1">
+<li>面对具有挑战性的输入查询，让语言模型在测试阶段有效利用额外的计算，从而提高其响应的准确性。</li>
+<li>有部署适应性“计算最优”策略的必要性，即根据提示选择利用测试时计算的具体方法，以最佳利用额外的计算资源。</li>
+<li>两种测试时计算修改方法：测试时计算应当修改分布，从而生成比直接从LLM采样更好的输出。
+<ol type="1">
+<li>输入层面：通过在给定提示中增加一组额外的标记，使LLM在此基础上获得修改后的分布（本研究使用<strong>通过改变输入tokens直接修改提议分布</strong>）</li>
+<li>输出层面：通过从标准语言模型中采样多个候选输出并对这些候选进行处理。（本研究<strong>使用验证器</strong>）</li>
+</ol></li>
+<li>估计问题难度实现计算优化扩展
+<ol type="1">
+<li>用pass@1率估计难度</li>
+<li>提出一个公式计算在计算预测 N 下针对问题 q 的计算优化扩展策略。</li>
+</ol></li>
+<li>通过验证器扩展测试时计算
+<ol type="1">
+<li>用一种无需人工标签，而是通过从每个解决步骤运行蒙特卡罗展开来监督 PRM
+的 PRM 训练方法。（此外提到 PRM 总是优于 ORM）</li>
+<li>答案聚合（Answer
+aggregation），以确定最佳答案：先逐步聚合获得答案最终评分，然后在答案之间聚合以确认最佳答案。
+<ol type="1">
+<li>逐步聚合：使用PRM在最后一步的预测作为完整答案的评分优于取乘积或最小值来聚合每步评分等方法。</li>
+<li>答案间聚合：使用加权最优（best-of-N weighted）。</li>
+</ol></li>
+<li>通过 PRM 的搜索方法<img
+src="../images/狂读论文：Scaling%20LLM%20Test-Time%20Compute%20Optimally%20can%20be%20More%20Effective%20than%20Scaling%20Model%20Parameters/Search%20Methods%20Against%20a%20PRM.png"
+alt="Search Methods Against a PRM" />
+<ol type="1">
+<li>Best-of-N</li>
+<li>束搜索（Beam Search）：N 个预测选 M
+个分数最高答案，再对每个选出的答案扩展出 N 个下一步，重复此过程。</li>
+<li>前瞻搜索（Lookahead search）：在束搜索每一步向前模拟 k 步，提高 PRM
+对当前步骤的价值估计准确性。但是会消耗额外计算资源。</li>
+<li>结果：小预算束搜索明显优于
+Best-of-N，预算增加则改进显著减小，前瞻搜索则在相同预算下表现不佳。</li>
+<li>哪些问题适合搜索改进：束搜索在较难问题和较低计算预算下更为有效，而
+best-of-N
+在较简单问题和较高预算下更具优势。最难问题任何方法都一般。</li>
+</ol></li>
+<li>改善提议分布：使模型能够迭代地修正自己的答案，从而在测试时动态改善自身的分布。
+<ol type="1">
+<li>修正数据：在上下文中包含最多四个错误答案，具体数量从0到4的均匀分布中随机采样。使用字符编辑距离度量来优先选择与最终正确答案相关的错误答案。</li>
+<li>顺序采样的解决方案表现优于并行采样。</li>
+</ol></li>
+<li>平衡预训练和测试时计算：在简单和中等难度的问题中，这些问题在模型的能力范围内，或者在推理需求较小的环境中，测试时间计算可以轻松弥补额外的预训练。然而，在更具挑战性的问题上，这些问题超出了给定基础模型的能力，或者在推理需求较高的情况下，预训练更可能对提升性能更加有效。</li>
+</ol></li>
+</ol>
+<h4 id="英语单词">英语单词</h4>
+<ol type="1">
+<li>non-trivial 不凡的</li>
+<li>implications 影响</li>
+<li>tradeoff 权衡</li>
+<li>primary 主要的</li>
+<li>adaptively 自适应地</li>
+<li>compute-optimal 计算最优的</li>
+<li>install ... into 将...赋予</li>
+<li>avenue 途径</li>
+<li>agenic 代理的，自主的</li>
+<li>proposal distribution
+提议分布：为了获取所需样本而设计的一种分布方式。</li>
+<li>alter 改变</li>
+<li>efficacy 有效性</li>
+<li>extent 程度</li>
+<li>substitute for 替代</li>
+<li>be 1-to-1 exchangeable with 一一对应的</li>
+<li>modify 修改</li>
+<li>knob 方法</li>
+<li>post-hoc 后验的</li>
+<li>be reminiscent of 使人想起，类似于</li>
+<li>aggregate 聚合，汇总</li>
+<li>canonical 典型的，经典的</li>
+<li>wherein 其中</li>
+<li>allocate 分配</li>
+<li>revision 修正</li>
+<li>sophisticated 复杂的</li>
+<li>notion 概念</li>
+<li>ad-hoc 随意的，临时的</li>
+<li>discrete 离散的</li>
+<li>concretely 具体地</li>
+<li>feasible 可行的</li>
+<li>incur 招致</li>
+<li>confounder 混淆因素</li>
+<li>two-fold cross validation
+二折交叉验证。它是一种将数据集分为两部分，一部分用于训练模型，另一部分用于验证模型的方法。</li>
+<li>vice versa 反之亦然</li>
+<li>protocol 协议</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2025/01/24/Blender%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kuangrepi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuangrepi的博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuangrepi的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/24/Blender%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Blender入门笔记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-01-24 15:54:04 / Modified: 18:22:00" itemprop="dateCreated datePublished" datetime="2025-01-24T15:54:04+08:00">2025-01-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="基础操作">基础操作</h4>
+<ol type="1">
+<li>场景编辑
+<ol type="1">
+<li>位移：shift ＋ 鼠标中键</li>
+<li>旋转：长按鼠标中键</li>
+<li>放大缩小：鼠标滚轮</li>
+<li>新建对象：shift + A</li>
+</ol></li>
+<li>视图调整：小键盘
+<ul>
+<li>1：正视图</li>
+<li>3：侧视图</li>
+<li>5：透视图</li>
+<li>7：顶视图</li>
+<li>实心键：最大化显示</li>
+</ul></li>
+<li>对象编辑：
+<ol type="1">
+<li>独立显示：/</li>
+<li>位移：G</li>
+<li>旋转：R</li>
+<li>缩放：S</li>
+<li>X，Y，Z：选择轴进行位移，旋转，缩放</li>
+<li>透显：Alt + Z</li>
+<li>打开编辑：ctrl + tab</li>
+<li>倒角（把角或者边变形）ctrl + B</li>
+</ol></li>
+</ol>
+<h4 id="渲染">渲染</h4>
+<ol type="1">
+<li>分裂出三个窗口，一个显示，一个材质，一个编辑</li>
+<li>摄像机
+<ol type="1">
+<li>0：进入计算机视角</li>
+<li>侧边栏
+<ol type="1">
+<li>视图锁定摄像机调节角度</li>
+</ol></li>
+<li>增大焦距，防止畸变</li>
+</ol></li>
+<li>材质
+<ol type="1">
+<li></li>
+</ol></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2025/01/23/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9ATest-time-Computing-from-System-1-Thinking-to-System-2-Thinking/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -213,9 +681,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2025-01-23 23:02:53 / Modified: 23:27:57" itemprop="dateCreated datePublished" datetime="2025-01-23T23:02:53+08:00">2025-01-23</time>
+      <time title="Created: 2025-01-23 23:02:53" itemprop="dateCreated datePublished" datetime="2025-01-23T23:02:53+08:00">2025-01-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-02-23 11:12:00" itemprop="dateModified" datetime="2025-02-23T11:12:00+08:00">2025-02-23</time>
     </span>
 
   
@@ -228,145 +702,240 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="英语单词">英语单词</h4>
+          <h4 id="内容总结关于test-reasoning">内容总结（关于test-reasoning)</h4>
 <ol type="1">
-<li>modification 改良</li>
-<li>calibration 校准</li>
-<li>modality 模态，形式</li>
-<li>scarcity 稀缺</li>
-<li>computational 计算的</li>
-<li>shortcoming 缺点</li>
-<li>intuitive 直觉的</li>
-<li>inference 推理</li>
-<li>perceptual 概念的</li>
-<li>pattern 模式</li>
-<li>assumption 假定</li>
-<li>generalization 泛化</li>
-<li>leverages 利用</li>
-<li>steer 引导</li>
-<li>modify 修改</li>
-<li>calibrate 校准</li>
-<li>preliminary 初步的</li>
-<li>decompose 分解</li>
-<li>simulate 模拟</li>
-<li>remainder 其余部分</li>
-<li>deliberate 深思熟虑的</li>
-<li>perceptual 感知的</li>
-<li>explicitly 明确的，显式的</li>
-<li>incrementally 逐步的</li>
-<li>be prone to 容易，倾向于</li>
-<li>empirical 实证的，经验主义的</li>
-<li>cumulative 累计的</li>
-<li>etrieval-augmented 搜索增强的</li>
-<li>mitigate 减轻</li>
-<li>utilize 利用</li>
-<li>finetune 微调</li>
-<li>taxonomy 分类</li>
-<li>distribution 分布</li>
-<li>obtain 获得</li>
-<li>optimization 优化</li>
-<li>algorithm 算法</li>
-<li>auxiliary 辅助的</li>
-<li>entropy 熵</li>
-<li>marginal 边际的</li>
-<li>pitfalls 陷阱</li>
-<li>trivial 微不足道的</li>
-<li>regulation 规则化</li>
-<li>multilingual 多语言的</li>
-<li>cross-modal 跨模态的</li>
-<li>retrieval 检索</li>
-<li>caption 字幕</li>
-<li>scenarios 场景</li>
-<li>normalization 归一化</li>
-<li>propagation 传播</li>
-<li>covariance 协方差</li>
-<li>gradient 梯度</li>
-<li>catastrophic 灾难性的</li>
-<li>episodic 情节的</li>
-<li>latency 延迟</li>
-<li>incremental 增量的</li>
-<li>exponential 指数的</li>
-<li>incorporate 结合</li>
-<li>stem from 源于</li>
-<li>in-context 上下文的</li>
-<li>selection 选择</li>
-<li>objective 目标</li>
-<li>empirical 实证的</li>
-<li>semantically 语义上地</li>
-<li>descending 降序的</li>
-<li>implicit 隐式的</li>
-<li>Bayesian 贝叶斯</li>
-<li>sequentical 顺序的</li>
-<li>annotation 注释 annotate 注释</li>
-<li>subsequent 后续的</li>
-<li>traversal 遍历的</li>
-<li>bottleneck 瓶颈</li>
-<li>externalize 外化</li>
-<li>steering 指导的</li>
-<li>residual 残差的</li>
-<li>alleviate 降低</li>
-<li>hallucination 幻觉</li>
-<li>toxicity 毒性</li>
-<li>compromise 影响</li>
-<li>calibrate 校准</li>
-<li>contextual 上下文的</li>
-<li>transferability 可移植性</li>
-<li>component 组成部分</li>
-<li>alignment 对齐</li>
-<li>rationale 理由</li>
-<li>critique 评论</li>
-<li>verbal-based 基于语言的</li>
-<li>interpretability 可解释性</li>
-<li>pairwise 成对的</li>
-<li>revision 修改</li>
-<li>coherence 连贯性</li>
-<li>alignment 对齐性</li>
-<li>consistency 一致性</li>
-<li>biase 偏差</li>
-<li>perplexity 困惑</li>
-<li>mitigate 减轻</li>
-<li>annotation 符号</li>
-<li>criteria 批评</li>
-<li>distill 提炼</li>
-<li>unify ... into 统一成</li>
-<li>align ... with 符合</li>
-<li>verify 验证</li>
-<li>ensemble 集成</li>
-<li>vanilla 普通的</li>
-<li>validation 验证</li>
-<li>executable 可执行的</li>
-<li>variant 变体</li>
-<li>surpass 超过</li>
-<li>prune 修剪</li>
-<li>threshold 阈值</li>
-<li>intrinsic 内部的</li>
-<li>scalability 可扩展性</li>
-<li>template 模板</li>
-<li>synthetic 合成的</li>
-<li>substantial 实质性的</li>
-<li>be susceptible to 容易受到...的影响</li>
-<li>adversarial 对抗性的</li>
-<li>stance 立场</li>
-<li>topological 拓扑的</li>
-<li>sparse 稀疏的</li>
-<li>be inferior to 比...差</li>
-<li>consensus 共识</li>
-<li>arithmetic 算术的</li>
-<li>degradation 下降</li>
-<li>controversial 争议性的</li>
-<li>guaranteed 保证的</li>
-<li>oracle 预言</li>
-<li>decouple 解耦</li>
-<li>aforementioned 前面提到的</li>
-<li>manually 手动的</li>
-<li>trajectory 轨迹</li>
-<li>parallel 并行的</li>
-<li>heuristic 启发式的</li>
-<li>conjecture 猜想</li>
-<li>multimoda 多模态</li>
-<li>cache 缓存</li>
-<li>compression 压缩</li>
-<li>speculative 推理的</li>
+<li><p>测试时推理核心是反馈建模和搜索策略</p>
+<figure>
+<img
+src="../images/狂读论文：Test-time%20Computing-%20from%20System-1%20Thinking%20to%20System-2%20Thinking/Illustration%20of%20feedback%20modeling,search%20strategies%20and%20improvement%20training%20in%20test-time%20reasoning.png"
+alt="Illustration of feedback modeling,search strategies and improvement training in test-time reasoning" />
+<figcaption aria-hidden="true">Illustration of feedback modeling,search
+strategies and improvement training in test-time reasoning</figcaption>
+</figure></li>
+<li><p><strong>反馈建模</strong></p>
+<ol type="1">
+<li>基于分数的反馈：利用验证器
+<ol type="1">
+<li>基于结果的验证器（ORM）：使用最终思维链结果的正确性作为训练反馈。</li>
+<li>基于过程的验证器（PRM）：则基于每个推理步骤的反馈进行训练。不仅评估中间推理步骤，而且比
+ORM 更准确地评估整个推理过程。
+<ol type="1">
+<li>PRM
+需要更多的人力来注释中间步骤的反馈：蒙特卡洛树搜索（MCTS）算法自动收集高质量的过程监督数据。</li>
+<li>PRM
+应该评估每个步骤对后续推理的优势，而不仅仅关注其正确性：过程优势验证器（PAVs），并通过蒙特卡洛模拟有效地构建训练数据。</li>
+<li>基于分数的反馈建模忽略了大型语言模型的生成能力，使得难以检测细粒度的错误：GenRM利用指令调整使验证器能够回答“答案是否正确（是/否）？”，并使用生成“是”标记的概率作为分数。GenRM
+还可以结合思维链，允许验证器在回答“是”或“否”之前生成相应的理由。</li>
+<li>CriticRM联合训练评论模型和验证器。在推理过程中，验证器根据答案和评论模型生成的基于语言的反馈进行评分。（这也放在这一段么？）</li>
+</ol></li>
+</ol></li>
+<li>基于语言的反馈：充分利用了大型语言模型的指令遵循能力。通过设计特定的指令，它可以进行成对比较，从多个维度评估答案，甚至以自然语言提供修改建议。
+<ol type="1">
+<li>面临诸如长度、位置和困惑度等偏差：精心设计系统指令以减轻偏差的干扰。</li>
+<li>获得更便宜的基于语言的反馈：监督微调评估模型。</li>
+<li>精细的评估维度：分别训练一个单独的评估模型和一个成对排序模型，然后通过权重合并将它们统一到一个大型语言模型中。</li>
+<li>评估标准更灵活，生成的评估数据更多样化，并且与人类行为更一致：确定每个查询的评估标准，并生成相应的语言反馈。</li>
+</ol></li>
+</ol></li>
+<li><p><strong>搜索策略</strong></p>
+<figure>
+<img
+src="../images/狂读论文：Test-time%20Computing-%20from%20System-1%20Thinking%20to%20System-2%20Thinking/Overall%20of%20search%20strategies.png"
+alt="Overall of search strategies" />
+<figcaption aria-hidden="true">Overall of search strategies</figcaption>
+</figure>
+<ol type="1">
+<li>重复采样：采样策略如 top - p 和 top - k
+是大型语言模型推理中常用的解码算法。重点在于验证策略，就是怎么评分。
+<ol type="1">
+<li>多数投票
+<ol type="1">
+<li>犯类似错误：在投票前进行验证或过滤。</li>
+</ol></li>
+<li>Best of N
+<ol type="1">
+<li>变体：根据验证器分数对答案进行加权投票。</li>
+<li>效率低：
+<ol type="1">
+<li>修剪得分低的采样，停止其进一步生成。</li>
+<li>PRS使大模型能够自我评论和自我纠正，以减少采样次数。</li>
+</ol></li>
+<li>改进训练：通过 BoN 采样训练模型以近似 BoN
+分布，从而减少推理过程中的搜索空间。</li>
+</ol></li>
+</ol></li>
+<li>自我纠正：使大型语言模型能够根据外部或内部反馈迭代地修改和完善生成的结果。
+<ol type="1">
+<li>反馈来源
+<ol type="1">
+<li>人类评估</li>
+<li>工具检查：如编译器检查代码。</li>
+<li>外部模型评估：大模型当评论者，多智能体辩论。</li>
+<li>内在反馈：大模型自我评论。</li>
+</ol></li>
+<li>有效性争议：被质疑有效性是否高：主要性能瓶颈在于定位错误，建议微调特定模型。</li>
+<li>改进训练：监督微调，在线模仿学习，多轮强化学习方法。</li>
+</ol></li>
+<li>树搜索：搜索算法和价值函数是树搜索中的两个关键组件。
+<ol type="1">
+<li>搜索算法
+<ol type="1">
+<li>无信息搜索：DFS，BFS，Beam search。</li>
+<li>启发式搜索：MCTS
+通过选择、扩展、模拟和反向传播四个步骤逐渐优化搜索结果，接近最优解。Long
+使用强化学习训练一个大型语言模型控制器来引导大型语言模型推理器的搜索路径。</li>
+</ol></li>
+<li>价值函数
+<ol type="1">
+<li>RAP 设计一系列启发式价值函数，依任务组合。</li>
+<li>AlphaMath 和 TS - LLM 用大语言模型价值函数替代手工函数。</li>
+<li>传统 MCTS 只扩展一个轨迹，rStar
+保留多候选路径，用另一个大语言模型推理选路径，并选择两个大模型推理一致的路径。</li>
+<li>SC - MCTS 用多个外部奖励模型作价值函数。</li>
+</ol></li>
+<li>改进训练：奖励函数与偏好优化。</li>
+</ol></li>
+</ol></li>
+</ol>
+<h4 id="英语单词">英语单词</h4>
+<ol type="1">
+<li><p>modification 改良</p></li>
+<li><p>calibration 校准</p></li>
+<li><p>modality 模态，形式</p></li>
+<li><p>scarcity 稀缺</p></li>
+<li><p>computational 计算的</p></li>
+<li><p>shortcoming 缺点</p></li>
+<li><p>intuitive 直觉的</p></li>
+<li><p>inference 推理</p></li>
+<li><p>perceptual 概念的</p></li>
+<li><p>pattern 模式</p></li>
+<li><p>assumption 假定</p></li>
+<li><p>generalization 泛化</p></li>
+<li><p>leverages 利用</p></li>
+<li><p>steer 引导</p></li>
+<li><p>modify 修改</p></li>
+<li><p>calibrate 校准</p></li>
+<li><p>preliminary 初步的</p></li>
+<li><p>decompose 分解</p></li>
+<li><p>simulate 模拟</p></li>
+<li><p>remainder 其余部分</p></li>
+<li><p>deliberate 深思熟虑的</p></li>
+<li><p>perceptual 感知的</p></li>
+<li><p>explicitly 明确的，显式的</p></li>
+<li><p>incrementally 逐步的</p></li>
+<li><p>be prone to 容易，倾向于</p></li>
+<li><p>empirical 实证的，经验主义的</p></li>
+<li><p>cumulative 累计的</p></li>
+<li><p>etrieval-augmented 搜索增强的</p></li>
+<li><p>mitigate 减轻</p></li>
+<li><p>utilize 利用</p></li>
+<li><p>finetune 微调</p></li>
+<li><p>taxonomy 分类</p></li>
+<li><p>distribution 分布</p></li>
+<li><p>obtain 获得</p></li>
+<li><p>optimization 优化</p></li>
+<li><p>algorithm 算法</p></li>
+<li><p>auxiliary 辅助的</p></li>
+<li><p>entropy 熵</p></li>
+<li><p>marginal 边际的</p></li>
+<li><p>pitfalls 陷阱</p></li>
+<li><p>trivial 微不足道的</p></li>
+<li><p>regulation 规则化</p></li>
+<li><p>multilingual 多语言的</p></li>
+<li><p>cross-modal 跨模态的</p></li>
+<li><p>retrieval 检索</p></li>
+<li><p>caption 字幕</p></li>
+<li><p>scenarios 场景</p></li>
+<li><p>normalization 归一化</p></li>
+<li><p>propagation 传播</p></li>
+<li><p>covariance 协方差</p></li>
+<li><p>gradient 梯度</p></li>
+<li><p>catastrophic 灾难性的</p></li>
+<li><p>episodic 情节的</p></li>
+<li><p>latency 延迟</p></li>
+<li><p>incremental 增量的</p></li>
+<li><p>exponential 指数的</p></li>
+<li><p>incorporate 结合</p></li>
+<li><p>stem from 源于</p></li>
+<li><p>in-context 上下文的</p></li>
+<li><p>selection 选择</p></li>
+<li><p>objective 目标</p></li>
+<li><p>empirical 实证的</p></li>
+<li><p>semantically 语义上地</p></li>
+<li><p>descending 降序的</p></li>
+<li><p>implicit 隐式的</p></li>
+<li><p>Bayesian 贝叶斯</p></li>
+<li><p>sequentical 顺序的</p></li>
+<li><p>annotation 注释 annotate 注释</p></li>
+<li><p>subsequent 后续的</p></li>
+<li><p>traversal 遍历的</p></li>
+<li><p>bottleneck 瓶颈</p></li>
+<li><p>externalize 外化</p></li>
+<li><p>steering 指导的</p></li>
+<li><p>residual 残差的</p></li>
+<li><p>alleviate 降低</p></li>
+<li><p>hallucination 幻觉</p></li>
+<li><p>toxicity 毒性</p></li>
+<li><p>compromise 影响</p></li>
+<li><p>calibrate 校准</p></li>
+<li><p>contextual 上下文的</p></li>
+<li><p>transferability 可移植性</p></li>
+<li><p>component 组成部分</p></li>
+<li><p>alignment 对齐</p></li>
+<li><p>rationale 理由</p></li>
+<li><p>critique 评论</p></li>
+<li><p>verbal-based 基于语言的</p></li>
+<li><p>interpretability 可解释性</p></li>
+<li><p>pairwise 成对的</p></li>
+<li><p>revision 修改</p></li>
+<li><p>coherence 连贯性</p></li>
+<li><p>alignment 对齐性</p></li>
+<li><p>consistency 一致性</p></li>
+<li><p>biase 偏差</p></li>
+<li><p>perplexity 困惑</p></li>
+<li><p>mitigate 减轻</p></li>
+<li><p>annotation 符号</p></li>
+<li><p>criteria 批评</p></li>
+<li><p>distill 提炼</p></li>
+<li><p>unify ... into 统一成</p></li>
+<li><p>align ... with 符合</p></li>
+<li><p>verify 验证</p></li>
+<li><p>ensemble 集成</p></li>
+<li><p>vanilla 普通的</p></li>
+<li><p>validation 验证</p></li>
+<li><p>executable 可执行的</p></li>
+<li><p>variant 变体</p></li>
+<li><p>surpass 超过</p></li>
+<li><p>prune 修剪</p></li>
+<li><p>threshold 阈值</p></li>
+<li><p>intrinsic 内部的</p></li>
+<li><p>scalability 可扩展性</p></li>
+<li><p>template 模板</p></li>
+<li><p>synthetic 合成的</p></li>
+<li><p>substantial 实质性的</p></li>
+<li><p>be susceptible to 容易受到...的影响</p></li>
+<li><p>adversarial 对抗性的</p></li>
+<li><p>stance 立场</p></li>
+<li><p>topological 拓扑的</p></li>
+<li><p>sparse 稀疏的</p></li>
+<li><p>be inferior to 比...差</p></li>
+<li><p>consensus 共识</p></li>
+<li><p>arithmetic 算术的</p></li>
+<li><p>degradation 下降</p></li>
+<li><p>controversial 争议性的</p></li>
+<li><p>guaranteed 保证的</p></li>
+<li><p>oracle 预言</p></li>
+<li><p>decouple 解耦</p></li>
+<li><p>aforementioned 前面提到的</p></li>
+<li><p>manually 手动的</p></li>
+<li><p>trajectory 轨迹</p></li>
+<li><p>parallel 并行的</p></li>
+<li><p>heuristic 启发式的</p></li>
+<li><p>conjecture 猜想</p></li>
+<li><p>multimoda 多模态</p></li>
+<li><p>cache 缓存</p></li>
+<li><p>compression 压缩</p></li>
+<li><p>speculative 推理的</p></li>
 </ol>
 
       
@@ -430,7 +999,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-01-19 22:01:13" itemprop="dateModified" datetime="2025-01-19T22:01:13+08:00">2025-01-19</time>
+      <time title="Modified: 2025-02-23 11:11:32" itemprop="dateModified" datetime="2025-02-23T11:11:32+08:00">2025-02-23</time>
     </span>
 
   
@@ -444,6 +1013,45 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>原博客连接：https://huggingface.co/spaces/HuggingFaceH4/blogpost-scaling-test-time-compute</p>
+<h4 id="内容总结">内容总结</h4>
+<ol type="1">
+<li>理解：利用奖励模型在推理阶段扩展</li>
+<li>TTC的两种策略：
+<ol type="1">
+<li>自我优化，利用大模型来评价</li>
+<li>利用奖励模型进行评估（本文利用这种方法）
+<ol type="1">
+<li>PRM：可以对每个过程进行评估</li>
+<li>ORM：只能评估最后结果</li>
+</ol></li>
+</ol></li>
+<li>搜索答案方法（类似语言模型的采样方法，分数类似概率）<img
+src="../images/狂读论文：blog-scaling-test-time-compute/search-strategies.png"
+alt="search-strategies" />
+<ol type="1">
+<li>Best-of-N：所有待选项选择最好的。</li>
+<li>Beam
+search：每次在M个待选答案中保留最高的N个继续搜索，最终选择总体概率最高的路线。</li>
+<li>Diverse Verifier Tree Search：独立的进行两个beam
+search，最后比较各自的最佳结果。</li>
+<li>此外文章还用到了不需要 PRM 的 Majority
+voting：选重复最多次的答案。</li>
+</ol></li>
+<li>流程<img
+src="../images/狂读论文：blog-scaling-test-time-compute/system.png"
+alt="system" />
+<ol type="1">
+<li>对问题生成多个答案</li>
+<li>利用PRM评估所有答案，通过搜索策略选择出几个最好答案</li>
+<li>再利用选择答案以及相应提示词继续生成多个答案，循环往复，直到EOS的token。</li>
+</ol></li>
+<li>提出了一个公式，根据你的计算量预算，题目难度来选择搜索方法。</li>
+</ol>
+<h4 id="理解">理解</h4>
+<ol type="1">
+<li>利用test-time compute，可以让小模型的准确率大大提升。</li>
+<li>有点类似LoRA，主要依赖一个奖励函数和一套运行逻辑，而不需要改变模型本身参数。</li>
+</ol>
 <h4 id="英语单词">英语单词</h4>
 <ol type="1">
 <li><p>scaling 扩展 scalable 可扩展的</p>
@@ -607,7 +1215,7 @@ resource-intensive counterparts.</em></p></li>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-01-02 15:34:18" itemprop="dateModified" datetime="2025-01-02T15:34:18+08:00">2025-01-02</time>
+      <time title="Modified: 2025-02-16 21:20:01" itemprop="dateModified" datetime="2025-02-16T21:20:01+08:00">2025-02-16</time>
     </span>
 
   
@@ -622,10 +1230,10 @@ resource-intensive counterparts.</em></p></li>
     <div class="post-body" itemprop="articleBody">
           <p>网上发现没人解决这个，自己试出来了。</p>
 <p>使用Typora有一个很难受的地方，你想打开两个md文件左右对照看，然后你在打开一个md文件的情况下，点击打开另一个md文件，Typora就会给你展示一下它的欢迎页面，然后就没有然后了。你用Typora里面的打开文件功能也不行。</p>
-<p><img src="/images/Typora怎么打开多个窗口/Typora欢迎页面.png" /></p>
+<p><img src="../images/Typora怎么打开多个窗口/Typora欢迎页面.png" /></p>
 <h5 id="解决方案">解决方案</h5>
 <p>右键点击Typora图标，以管理员身份运行，然后在那个窗口用左上角的文件—打开...打开第一个文件，然后继续打开第二个文件，就能成功打开两个文件了，原理未知。</p>
-<p><img src="/images/Typora怎么打开多个窗口/文件打开.png" /></p>
+<p><img src="../images/Typora怎么打开多个窗口/文件打开.png" /></p>
 
       
     </div>
@@ -2399,86 +3007,9 @@ id="这里记录一下更新hexo需要的东西以免以后忘了"><strong>这�
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2024/12/17/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Kuangrepi">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kuangrepi的博客">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Kuangrepi的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/12/17/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-12-17 14:49:10" itemprop="dateCreated datePublished" datetime="2024-12-17T14:49:10+08:00">2024-12-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-01-02 16:16:47" itemprop="dateModified" datetime="2025-01-02T16:16:47+08:00">2025-01-02</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>​
-在距离期末周还有2周时，我建立了自己的博客网站，之前卡住没搞好主要因为hexo
-init 一直卡住。</p>
-<p>​ 以后看看能不能更新技术文章吧，但是我是菜鸡。</p>
-<p><img src="/images/hello-world/菜的安详.jpg" /></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
 
 </div>
   </main>

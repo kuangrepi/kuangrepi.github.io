@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"kuangrepi.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="英语单词  modification 改良 calibration 校准 modality 模态，形式 scarcity 稀缺 computational 计算的 shortcoming 缺点 intuitive 直觉的 inference 推理 perceptual 概念的 pattern 模式 assumption 假定 generalization 泛化 leve">
+    <meta name="description" content="内容总结（关于test-reasoning)  测试时推理核心是反馈建模和搜索策略   Illustration of feedback modeling,search strategies and improvement training in test-time reasoning  反馈建模  基于分数的反馈：利用验证器  基于结果的验证器（ORM）：使用最终思维链结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="狂读论文：Test-time Computing- from System-1 Thinking to System-2 Thinking">
 <meta property="og:url" content="https://kuangrepi.github.io/2025/01/23/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9ATest-time-Computing-from-System-1-Thinking-to-System-2-Thinking/index.html">
 <meta property="og:site_name" content="Kuangrepi的博客">
-<meta property="og:description" content="英语单词  modification 改良 calibration 校准 modality 模态，形式 scarcity 稀缺 computational 计算的 shortcoming 缺点 intuitive 直觉的 inference 推理 perceptual 概念的 pattern 模式 assumption 假定 generalization 泛化 leve">
+<meta property="og:description" content="内容总结（关于test-reasoning)  测试时推理核心是反馈建模和搜索策略   Illustration of feedback modeling,search strategies and improvement training in test-time reasoning  反馈建模  基于分数的反馈：利用验证器  基于结果的验证器（ORM）：使用最终思维链结">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-23T15:02:53.000Z">
-<meta property="article:modified_time" content="2025-01-23T15:27:57.041Z">
+<meta property="article:modified_time" content="2025-02-23T03:12:00.121Z">
 <meta property="article:author" content="Kuangrepi">
 <meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
@@ -138,7 +138,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D"><span class="nav-number">1.</span> <span class="nav-text">英语单词</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E6%80%BB%E7%BB%93%E5%85%B3%E4%BA%8Etest-reasoning"><span class="nav-number">1.</span> <span class="nav-text">内容总结（关于test-reasoning)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D"><span class="nav-number">2.</span> <span class="nav-text">英语单词</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -151,7 +151,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -220,9 +220,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2025-01-23 23:02:53 / Modified: 23:27:57" itemprop="dateCreated datePublished" datetime="2025-01-23T23:02:53+08:00">2025-01-23</time>
+      <time title="Created: 2025-01-23 23:02:53" itemprop="dateCreated datePublished" datetime="2025-01-23T23:02:53+08:00">2025-01-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-02-23 11:12:00" itemprop="dateModified" datetime="2025-02-23T11:12:00+08:00">2025-02-23</time>
     </span>
 
   
@@ -241,145 +247,240 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h4 id="英语单词">英语单词</h4>
+    <div class="post-body" itemprop="articleBody"><h4 id="内容总结关于test-reasoning">内容总结（关于test-reasoning)</h4>
 <ol type="1">
-<li>modification 改良</li>
-<li>calibration 校准</li>
-<li>modality 模态，形式</li>
-<li>scarcity 稀缺</li>
-<li>computational 计算的</li>
-<li>shortcoming 缺点</li>
-<li>intuitive 直觉的</li>
-<li>inference 推理</li>
-<li>perceptual 概念的</li>
-<li>pattern 模式</li>
-<li>assumption 假定</li>
-<li>generalization 泛化</li>
-<li>leverages 利用</li>
-<li>steer 引导</li>
-<li>modify 修改</li>
-<li>calibrate 校准</li>
-<li>preliminary 初步的</li>
-<li>decompose 分解</li>
-<li>simulate 模拟</li>
-<li>remainder 其余部分</li>
-<li>deliberate 深思熟虑的</li>
-<li>perceptual 感知的</li>
-<li>explicitly 明确的，显式的</li>
-<li>incrementally 逐步的</li>
-<li>be prone to 容易，倾向于</li>
-<li>empirical 实证的，经验主义的</li>
-<li>cumulative 累计的</li>
-<li>etrieval-augmented 搜索增强的</li>
-<li>mitigate 减轻</li>
-<li>utilize 利用</li>
-<li>finetune 微调</li>
-<li>taxonomy 分类</li>
-<li>distribution 分布</li>
-<li>obtain 获得</li>
-<li>optimization 优化</li>
-<li>algorithm 算法</li>
-<li>auxiliary 辅助的</li>
-<li>entropy 熵</li>
-<li>marginal 边际的</li>
-<li>pitfalls 陷阱</li>
-<li>trivial 微不足道的</li>
-<li>regulation 规则化</li>
-<li>multilingual 多语言的</li>
-<li>cross-modal 跨模态的</li>
-<li>retrieval 检索</li>
-<li>caption 字幕</li>
-<li>scenarios 场景</li>
-<li>normalization 归一化</li>
-<li>propagation 传播</li>
-<li>covariance 协方差</li>
-<li>gradient 梯度</li>
-<li>catastrophic 灾难性的</li>
-<li>episodic 情节的</li>
-<li>latency 延迟</li>
-<li>incremental 增量的</li>
-<li>exponential 指数的</li>
-<li>incorporate 结合</li>
-<li>stem from 源于</li>
-<li>in-context 上下文的</li>
-<li>selection 选择</li>
-<li>objective 目标</li>
-<li>empirical 实证的</li>
-<li>semantically 语义上地</li>
-<li>descending 降序的</li>
-<li>implicit 隐式的</li>
-<li>Bayesian 贝叶斯</li>
-<li>sequentical 顺序的</li>
-<li>annotation 注释 annotate 注释</li>
-<li>subsequent 后续的</li>
-<li>traversal 遍历的</li>
-<li>bottleneck 瓶颈</li>
-<li>externalize 外化</li>
-<li>steering 指导的</li>
-<li>residual 残差的</li>
-<li>alleviate 降低</li>
-<li>hallucination 幻觉</li>
-<li>toxicity 毒性</li>
-<li>compromise 影响</li>
-<li>calibrate 校准</li>
-<li>contextual 上下文的</li>
-<li>transferability 可移植性</li>
-<li>component 组成部分</li>
-<li>alignment 对齐</li>
-<li>rationale 理由</li>
-<li>critique 评论</li>
-<li>verbal-based 基于语言的</li>
-<li>interpretability 可解释性</li>
-<li>pairwise 成对的</li>
-<li>revision 修改</li>
-<li>coherence 连贯性</li>
-<li>alignment 对齐性</li>
-<li>consistency 一致性</li>
-<li>biase 偏差</li>
-<li>perplexity 困惑</li>
-<li>mitigate 减轻</li>
-<li>annotation 符号</li>
-<li>criteria 批评</li>
-<li>distill 提炼</li>
-<li>unify ... into 统一成</li>
-<li>align ... with 符合</li>
-<li>verify 验证</li>
-<li>ensemble 集成</li>
-<li>vanilla 普通的</li>
-<li>validation 验证</li>
-<li>executable 可执行的</li>
-<li>variant 变体</li>
-<li>surpass 超过</li>
-<li>prune 修剪</li>
-<li>threshold 阈值</li>
-<li>intrinsic 内部的</li>
-<li>scalability 可扩展性</li>
-<li>template 模板</li>
-<li>synthetic 合成的</li>
-<li>substantial 实质性的</li>
-<li>be susceptible to 容易受到...的影响</li>
-<li>adversarial 对抗性的</li>
-<li>stance 立场</li>
-<li>topological 拓扑的</li>
-<li>sparse 稀疏的</li>
-<li>be inferior to 比...差</li>
-<li>consensus 共识</li>
-<li>arithmetic 算术的</li>
-<li>degradation 下降</li>
-<li>controversial 争议性的</li>
-<li>guaranteed 保证的</li>
-<li>oracle 预言</li>
-<li>decouple 解耦</li>
-<li>aforementioned 前面提到的</li>
-<li>manually 手动的</li>
-<li>trajectory 轨迹</li>
-<li>parallel 并行的</li>
-<li>heuristic 启发式的</li>
-<li>conjecture 猜想</li>
-<li>multimoda 多模态</li>
-<li>cache 缓存</li>
-<li>compression 压缩</li>
-<li>speculative 推理的</li>
+<li><p>测试时推理核心是反馈建模和搜索策略</p>
+<figure>
+<img
+src="../images/狂读论文：Test-time%20Computing-%20from%20System-1%20Thinking%20to%20System-2%20Thinking/Illustration%20of%20feedback%20modeling,search%20strategies%20and%20improvement%20training%20in%20test-time%20reasoning.png"
+alt="Illustration of feedback modeling,search strategies and improvement training in test-time reasoning" />
+<figcaption aria-hidden="true">Illustration of feedback modeling,search
+strategies and improvement training in test-time reasoning</figcaption>
+</figure></li>
+<li><p><strong>反馈建模</strong></p>
+<ol type="1">
+<li>基于分数的反馈：利用验证器
+<ol type="1">
+<li>基于结果的验证器（ORM）：使用最终思维链结果的正确性作为训练反馈。</li>
+<li>基于过程的验证器（PRM）：则基于每个推理步骤的反馈进行训练。不仅评估中间推理步骤，而且比
+ORM 更准确地评估整个推理过程。
+<ol type="1">
+<li>PRM
+需要更多的人力来注释中间步骤的反馈：蒙特卡洛树搜索（MCTS）算法自动收集高质量的过程监督数据。</li>
+<li>PRM
+应该评估每个步骤对后续推理的优势，而不仅仅关注其正确性：过程优势验证器（PAVs），并通过蒙特卡洛模拟有效地构建训练数据。</li>
+<li>基于分数的反馈建模忽略了大型语言模型的生成能力，使得难以检测细粒度的错误：GenRM利用指令调整使验证器能够回答“答案是否正确（是/否）？”，并使用生成“是”标记的概率作为分数。GenRM
+还可以结合思维链，允许验证器在回答“是”或“否”之前生成相应的理由。</li>
+<li>CriticRM联合训练评论模型和验证器。在推理过程中，验证器根据答案和评论模型生成的基于语言的反馈进行评分。（这也放在这一段么？）</li>
+</ol></li>
+</ol></li>
+<li>基于语言的反馈：充分利用了大型语言模型的指令遵循能力。通过设计特定的指令，它可以进行成对比较，从多个维度评估答案，甚至以自然语言提供修改建议。
+<ol type="1">
+<li>面临诸如长度、位置和困惑度等偏差：精心设计系统指令以减轻偏差的干扰。</li>
+<li>获得更便宜的基于语言的反馈：监督微调评估模型。</li>
+<li>精细的评估维度：分别训练一个单独的评估模型和一个成对排序模型，然后通过权重合并将它们统一到一个大型语言模型中。</li>
+<li>评估标准更灵活，生成的评估数据更多样化，并且与人类行为更一致：确定每个查询的评估标准，并生成相应的语言反馈。</li>
+</ol></li>
+</ol></li>
+<li><p><strong>搜索策略</strong></p>
+<figure>
+<img
+src="../images/狂读论文：Test-time%20Computing-%20from%20System-1%20Thinking%20to%20System-2%20Thinking/Overall%20of%20search%20strategies.png"
+alt="Overall of search strategies" />
+<figcaption aria-hidden="true">Overall of search strategies</figcaption>
+</figure>
+<ol type="1">
+<li>重复采样：采样策略如 top - p 和 top - k
+是大型语言模型推理中常用的解码算法。重点在于验证策略，就是怎么评分。
+<ol type="1">
+<li>多数投票
+<ol type="1">
+<li>犯类似错误：在投票前进行验证或过滤。</li>
+</ol></li>
+<li>Best of N
+<ol type="1">
+<li>变体：根据验证器分数对答案进行加权投票。</li>
+<li>效率低：
+<ol type="1">
+<li>修剪得分低的采样，停止其进一步生成。</li>
+<li>PRS使大模型能够自我评论和自我纠正，以减少采样次数。</li>
+</ol></li>
+<li>改进训练：通过 BoN 采样训练模型以近似 BoN
+分布，从而减少推理过程中的搜索空间。</li>
+</ol></li>
+</ol></li>
+<li>自我纠正：使大型语言模型能够根据外部或内部反馈迭代地修改和完善生成的结果。
+<ol type="1">
+<li>反馈来源
+<ol type="1">
+<li>人类评估</li>
+<li>工具检查：如编译器检查代码。</li>
+<li>外部模型评估：大模型当评论者，多智能体辩论。</li>
+<li>内在反馈：大模型自我评论。</li>
+</ol></li>
+<li>有效性争议：被质疑有效性是否高：主要性能瓶颈在于定位错误，建议微调特定模型。</li>
+<li>改进训练：监督微调，在线模仿学习，多轮强化学习方法。</li>
+</ol></li>
+<li>树搜索：搜索算法和价值函数是树搜索中的两个关键组件。
+<ol type="1">
+<li>搜索算法
+<ol type="1">
+<li>无信息搜索：DFS，BFS，Beam search。</li>
+<li>启发式搜索：MCTS
+通过选择、扩展、模拟和反向传播四个步骤逐渐优化搜索结果，接近最优解。Long
+使用强化学习训练一个大型语言模型控制器来引导大型语言模型推理器的搜索路径。</li>
+</ol></li>
+<li>价值函数
+<ol type="1">
+<li>RAP 设计一系列启发式价值函数，依任务组合。</li>
+<li>AlphaMath 和 TS - LLM 用大语言模型价值函数替代手工函数。</li>
+<li>传统 MCTS 只扩展一个轨迹，rStar
+保留多候选路径，用另一个大语言模型推理选路径，并选择两个大模型推理一致的路径。</li>
+<li>SC - MCTS 用多个外部奖励模型作价值函数。</li>
+</ol></li>
+<li>改进训练：奖励函数与偏好优化。</li>
+</ol></li>
+</ol></li>
+</ol>
+<h4 id="英语单词">英语单词</h4>
+<ol type="1">
+<li><p>modification 改良</p></li>
+<li><p>calibration 校准</p></li>
+<li><p>modality 模态，形式</p></li>
+<li><p>scarcity 稀缺</p></li>
+<li><p>computational 计算的</p></li>
+<li><p>shortcoming 缺点</p></li>
+<li><p>intuitive 直觉的</p></li>
+<li><p>inference 推理</p></li>
+<li><p>perceptual 概念的</p></li>
+<li><p>pattern 模式</p></li>
+<li><p>assumption 假定</p></li>
+<li><p>generalization 泛化</p></li>
+<li><p>leverages 利用</p></li>
+<li><p>steer 引导</p></li>
+<li><p>modify 修改</p></li>
+<li><p>calibrate 校准</p></li>
+<li><p>preliminary 初步的</p></li>
+<li><p>decompose 分解</p></li>
+<li><p>simulate 模拟</p></li>
+<li><p>remainder 其余部分</p></li>
+<li><p>deliberate 深思熟虑的</p></li>
+<li><p>perceptual 感知的</p></li>
+<li><p>explicitly 明确的，显式的</p></li>
+<li><p>incrementally 逐步的</p></li>
+<li><p>be prone to 容易，倾向于</p></li>
+<li><p>empirical 实证的，经验主义的</p></li>
+<li><p>cumulative 累计的</p></li>
+<li><p>etrieval-augmented 搜索增强的</p></li>
+<li><p>mitigate 减轻</p></li>
+<li><p>utilize 利用</p></li>
+<li><p>finetune 微调</p></li>
+<li><p>taxonomy 分类</p></li>
+<li><p>distribution 分布</p></li>
+<li><p>obtain 获得</p></li>
+<li><p>optimization 优化</p></li>
+<li><p>algorithm 算法</p></li>
+<li><p>auxiliary 辅助的</p></li>
+<li><p>entropy 熵</p></li>
+<li><p>marginal 边际的</p></li>
+<li><p>pitfalls 陷阱</p></li>
+<li><p>trivial 微不足道的</p></li>
+<li><p>regulation 规则化</p></li>
+<li><p>multilingual 多语言的</p></li>
+<li><p>cross-modal 跨模态的</p></li>
+<li><p>retrieval 检索</p></li>
+<li><p>caption 字幕</p></li>
+<li><p>scenarios 场景</p></li>
+<li><p>normalization 归一化</p></li>
+<li><p>propagation 传播</p></li>
+<li><p>covariance 协方差</p></li>
+<li><p>gradient 梯度</p></li>
+<li><p>catastrophic 灾难性的</p></li>
+<li><p>episodic 情节的</p></li>
+<li><p>latency 延迟</p></li>
+<li><p>incremental 增量的</p></li>
+<li><p>exponential 指数的</p></li>
+<li><p>incorporate 结合</p></li>
+<li><p>stem from 源于</p></li>
+<li><p>in-context 上下文的</p></li>
+<li><p>selection 选择</p></li>
+<li><p>objective 目标</p></li>
+<li><p>empirical 实证的</p></li>
+<li><p>semantically 语义上地</p></li>
+<li><p>descending 降序的</p></li>
+<li><p>implicit 隐式的</p></li>
+<li><p>Bayesian 贝叶斯</p></li>
+<li><p>sequentical 顺序的</p></li>
+<li><p>annotation 注释 annotate 注释</p></li>
+<li><p>subsequent 后续的</p></li>
+<li><p>traversal 遍历的</p></li>
+<li><p>bottleneck 瓶颈</p></li>
+<li><p>externalize 外化</p></li>
+<li><p>steering 指导的</p></li>
+<li><p>residual 残差的</p></li>
+<li><p>alleviate 降低</p></li>
+<li><p>hallucination 幻觉</p></li>
+<li><p>toxicity 毒性</p></li>
+<li><p>compromise 影响</p></li>
+<li><p>calibrate 校准</p></li>
+<li><p>contextual 上下文的</p></li>
+<li><p>transferability 可移植性</p></li>
+<li><p>component 组成部分</p></li>
+<li><p>alignment 对齐</p></li>
+<li><p>rationale 理由</p></li>
+<li><p>critique 评论</p></li>
+<li><p>verbal-based 基于语言的</p></li>
+<li><p>interpretability 可解释性</p></li>
+<li><p>pairwise 成对的</p></li>
+<li><p>revision 修改</p></li>
+<li><p>coherence 连贯性</p></li>
+<li><p>alignment 对齐性</p></li>
+<li><p>consistency 一致性</p></li>
+<li><p>biase 偏差</p></li>
+<li><p>perplexity 困惑</p></li>
+<li><p>mitigate 减轻</p></li>
+<li><p>annotation 符号</p></li>
+<li><p>criteria 批评</p></li>
+<li><p>distill 提炼</p></li>
+<li><p>unify ... into 统一成</p></li>
+<li><p>align ... with 符合</p></li>
+<li><p>verify 验证</p></li>
+<li><p>ensemble 集成</p></li>
+<li><p>vanilla 普通的</p></li>
+<li><p>validation 验证</p></li>
+<li><p>executable 可执行的</p></li>
+<li><p>variant 变体</p></li>
+<li><p>surpass 超过</p></li>
+<li><p>prune 修剪</p></li>
+<li><p>threshold 阈值</p></li>
+<li><p>intrinsic 内部的</p></li>
+<li><p>scalability 可扩展性</p></li>
+<li><p>template 模板</p></li>
+<li><p>synthetic 合成的</p></li>
+<li><p>substantial 实质性的</p></li>
+<li><p>be susceptible to 容易受到...的影响</p></li>
+<li><p>adversarial 对抗性的</p></li>
+<li><p>stance 立场</p></li>
+<li><p>topological 拓扑的</p></li>
+<li><p>sparse 稀疏的</p></li>
+<li><p>be inferior to 比...差</p></li>
+<li><p>consensus 共识</p></li>
+<li><p>arithmetic 算术的</p></li>
+<li><p>degradation 下降</p></li>
+<li><p>controversial 争议性的</p></li>
+<li><p>guaranteed 保证的</p></li>
+<li><p>oracle 预言</p></li>
+<li><p>decouple 解耦</p></li>
+<li><p>aforementioned 前面提到的</p></li>
+<li><p>manually 手动的</p></li>
+<li><p>trajectory 轨迹</p></li>
+<li><p>parallel 并行的</p></li>
+<li><p>heuristic 启发式的</p></li>
+<li><p>conjecture 猜想</p></li>
+<li><p>multimoda 多模态</p></li>
+<li><p>cache 缓存</p></li>
+<li><p>compression 压缩</p></li>
+<li><p>speculative 推理的</p></li>
 </ol>
 
     </div>
@@ -420,6 +521,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2025/01/24/Blender%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" rel="next" title="Blender入门笔记">
+                  Blender入门笔记 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>

@@ -19,27 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"kuangrepi.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="上下标 12&lt;sub&gt;下标&lt;&#x2F;sub&gt;&lt;sup&gt;上标&lt;&#x2F;sup&gt; 一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式  包含：⊆ 等价于：⇔ 任意：∀ lambda λ （笑死了，一直以为是lamda，被周志华的组误导了） 求和：∑ 连乘：∏ 梯度：∇ 复合：∘ h̃，w̃，z̃，θ，φ">
+    <meta name="description" content="内容总结  面对具有挑战性的输入查询，让语言模型在测试阶段有效利用额外的计算，从而提高其响应的准确性。 有部署适应性“计算最优”策略的必要性，即根据提示选择利用测试时计算的具体方法，以最佳利用额外的计算资源。 两种测试时计算修改方法：测试时计算应当修改分布，从而生成比直接从LLM采样更好的输出。  输入层面：通过在给定提示中增加一组额外的标记，使LLM在此基础上获得修改后的分布（本研究">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown常见基础符号">
-<meta property="og:url" content="https://kuangrepi.github.io/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/index.html">
+<meta property="og:title" content="狂读论文：Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters">
+<meta property="og:url" content="https://kuangrepi.github.io/2025/02/22/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9AScaling%20LLM%20Test-Time%20Compute%20Optimally%20can%20be%20More%20Effective%20than%20Scaling%20Model%20Parameters/index.html">
 <meta property="og:site_name" content="Kuangrepi的博客">
-<meta property="og:description" content="上下标 12&lt;sub&gt;下标&lt;&#x2F;sub&gt;&lt;sup&gt;上标&lt;&#x2F;sup&gt; 一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式  包含：⊆ 等价于：⇔ 任意：∀ lambda λ （笑死了，一直以为是lamda，被周志华的组误导了） 求和：∑ 连乘：∏ 梯度：∇ 复合：∘ h̃，w̃，z̃，θ，φ">
+<meta property="og:description" content="内容总结  面对具有挑战性的输入查询，让语言模型在测试阶段有效利用额外的计算，从而提高其响应的准确性。 有部署适应性“计算最优”策略的必要性，即根据提示选择利用测试时计算的具体方法，以最佳利用额外的计算资源。 两种测试时计算修改方法：测试时计算应当修改分布，从而生成比直接从LLM采样更好的输出。  输入层面：通过在给定提示中增加一组额外的标记，使LLM在此基础上获得修改后的分布（本研究">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-12-23T11:41:24.000Z">
-<meta property="article:modified_time" content="2024-12-30T09:08:57.134Z">
+<meta property="article:published_time" content="2025-02-22T07:45:56.000Z">
+<meta property="article:modified_time" content="2025-02-24T13:15:10.085Z">
 <meta property="article:author" content="Kuangrepi">
-<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://kuangrepi.github.io/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/">
+<link rel="canonical" href="https://kuangrepi.github.io/2025/02/22/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9AScaling%20LLM%20Test-Time%20Compute%20Optimally%20can%20be%20More%20Effective%20than%20Scaling%20Model%20Parameters/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://kuangrepi.github.io/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/","path":"2024/12/23/Markdown常见基础符号/","title":"Markdown常见基础符号"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://kuangrepi.github.io/2025/02/22/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9AScaling%20LLM%20Test-Time%20Compute%20Optimally%20can%20be%20More%20Effective%20than%20Scaling%20Model%20Parameters/","path":"2025/02/22/狂读论文：Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters/","title":"狂读论文：Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Markdown常见基础符号 | Kuangrepi的博客</title>
+<title>狂读论文：Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters | Kuangrepi的博客</title>
   
 
 
@@ -125,7 +125,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -138,6 +138,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">内容总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D"><span class="nav-number">2.</span> <span class="nav-text">英语单词</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -191,7 +192,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2024/12/23/Markdown%E5%B8%B8%E8%A7%81%E5%9F%BA%E7%A1%80%E7%AC%A6%E5%8F%B7/">
+    <link itemprop="mainEntityOfPage" href="https://kuangrepi.github.io/2025/02/22/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9AScaling%20LLM%20Test-Time%20Compute%20Optimally%20can%20be%20More%20Effective%20than%20Scaling%20Model%20Parameters/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -204,12 +205,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Markdown常见基础符号 | Kuangrepi的博客">
+      <meta itemprop="name" content="狂读论文：Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters | Kuangrepi的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Markdown常见基础符号
+          狂读论文：Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters
         </h1>
 
         <div class="post-meta-container">
@@ -220,14 +221,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2024-12-23 19:41:24" itemprop="dateCreated datePublished" datetime="2024-12-23T19:41:24+08:00">2024-12-23</time>
+      <time title="Created: 2025-02-22 15:45:56" itemprop="dateCreated datePublished" datetime="2025-02-22T15:45:56+08:00">2025-02-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-12-30 17:08:57" itemprop="dateModified" datetime="2024-12-30T17:08:57+08:00">2024-12-30</time>
+      <time title="Modified: 2025-02-24 21:15:10" itemprop="dateModified" datetime="2025-02-24T21:15:10+08:00">2025-02-24</time>
     </span>
 
   
@@ -246,21 +247,92 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><ol type="1">
-<li><p>上下标</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;sub&gt;下标&lt;/sub&gt;</span><br><span class="line">&lt;sup&gt;上标&lt;/sup&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>一些用来复制粘贴的符号，不知道为什么Typora不能用一些公式</p>
+    <div class="post-body" itemprop="articleBody"><h4 id="内容总结">内容总结</h4>
 <ol type="1">
-<li>包含：⊆</li>
-<li>等价于：⇔</li>
-<li>任意：∀</li>
-<li>lambda λ （笑死了，一直以为是lamda，被周志华的组误导了）</li>
-<li>求和：∑</li>
-<li>连乘：∏</li>
-<li>梯度：∇</li>
-<li>复合：∘</li>
-<li>h̃，w̃，z̃，θ，φ</li>
+<li>面对具有挑战性的输入查询，让语言模型在测试阶段有效利用额外的计算，从而提高其响应的准确性。</li>
+<li>有部署适应性“计算最优”策略的必要性，即根据提示选择利用测试时计算的具体方法，以最佳利用额外的计算资源。</li>
+<li>两种测试时计算修改方法：测试时计算应当修改分布，从而生成比直接从LLM采样更好的输出。
+<ol type="1">
+<li>输入层面：通过在给定提示中增加一组额外的标记，使LLM在此基础上获得修改后的分布（本研究使用<strong>通过改变输入tokens直接修改提议分布</strong>）</li>
+<li>输出层面：通过从标准语言模型中采样多个候选输出并对这些候选进行处理。（本研究<strong>使用验证器</strong>）</li>
 </ol></li>
+<li>估计问题难度实现计算优化扩展
+<ol type="1">
+<li>用pass@1率估计难度</li>
+<li>提出一个公式计算在计算预测 N 下针对问题 q 的计算优化扩展策略。</li>
+</ol></li>
+<li>通过验证器扩展测试时计算
+<ol type="1">
+<li>用一种无需人工标签，而是通过从每个解决步骤运行蒙特卡罗展开来监督 PRM
+的 PRM 训练方法。（此外提到 PRM 总是优于 ORM）</li>
+<li>答案聚合（Answer
+aggregation），以确定最佳答案：先逐步聚合获得答案最终评分，然后在答案之间聚合以确认最佳答案。
+<ol type="1">
+<li>逐步聚合：使用PRM在最后一步的预测作为完整答案的评分优于取乘积或最小值来聚合每步评分等方法。</li>
+<li>答案间聚合：使用加权最优（best-of-N weighted）。</li>
+</ol></li>
+<li>通过 PRM 的搜索方法<img
+src="../images/狂读论文：Scaling%20LLM%20Test-Time%20Compute%20Optimally%20can%20be%20More%20Effective%20than%20Scaling%20Model%20Parameters/Search%20Methods%20Against%20a%20PRM.png"
+alt="Search Methods Against a PRM" />
+<ol type="1">
+<li>Best-of-N</li>
+<li>束搜索（Beam Search）：N 个预测选 M
+个分数最高答案，再对每个选出的答案扩展出 N 个下一步，重复此过程。</li>
+<li>前瞻搜索（Lookahead search）：在束搜索每一步向前模拟 k 步，提高 PRM
+对当前步骤的价值估计准确性。但是会消耗额外计算资源。</li>
+<li>结果：小预算束搜索明显优于
+Best-of-N，预算增加则改进显著减小，前瞻搜索则在相同预算下表现不佳。</li>
+<li>哪些问题适合搜索改进：束搜索在较难问题和较低计算预算下更为有效，而
+best-of-N
+在较简单问题和较高预算下更具优势。最难问题任何方法都一般。</li>
+</ol></li>
+<li>改善提议分布：使模型能够迭代地修正自己的答案，从而在测试时动态改善自身的分布。
+<ol type="1">
+<li>修正数据：在上下文中包含最多四个错误答案，具体数量从0到4的均匀分布中随机采样。使用字符编辑距离度量来优先选择与最终正确答案相关的错误答案。</li>
+<li>顺序采样的解决方案表现优于并行采样。</li>
+</ol></li>
+<li>平衡预训练和测试时计算：在简单和中等难度的问题中，这些问题在模型的能力范围内，或者在推理需求较小的环境中，测试时间计算可以轻松弥补额外的预训练。然而，在更具挑战性的问题上，这些问题超出了给定基础模型的能力，或者在推理需求较高的情况下，预训练更可能对提升性能更加有效。</li>
+</ol></li>
+</ol>
+<h4 id="英语单词">英语单词</h4>
+<ol type="1">
+<li>non-trivial 不凡的</li>
+<li>implications 影响</li>
+<li>tradeoff 权衡</li>
+<li>primary 主要的</li>
+<li>adaptively 自适应地</li>
+<li>compute-optimal 计算最优的</li>
+<li>install ... into 将...赋予</li>
+<li>avenue 途径</li>
+<li>agenic 代理的，自主的</li>
+<li>proposal distribution
+提议分布：为了获取所需样本而设计的一种分布方式。</li>
+<li>alter 改变</li>
+<li>efficacy 有效性</li>
+<li>extent 程度</li>
+<li>substitute for 替代</li>
+<li>be 1-to-1 exchangeable with 一一对应的</li>
+<li>modify 修改</li>
+<li>knob 方法</li>
+<li>post-hoc 后验的</li>
+<li>be reminiscent of 使人想起，类似于</li>
+<li>aggregate 聚合，汇总</li>
+<li>canonical 典型的，经典的</li>
+<li>wherein 其中</li>
+<li>allocate 分配</li>
+<li>revision 修正</li>
+<li>sophisticated 复杂的</li>
+<li>notion 概念</li>
+<li>ad-hoc 随意的，临时的</li>
+<li>discrete 离散的</li>
+<li>concretely 具体地</li>
+<li>feasible 可行的</li>
+<li>incur 招致</li>
+<li>confounder 混淆因素</li>
+<li>two-fold cross validation
+二折交叉验证。它是一种将数据集分为两部分，一部分用于训练模型，另一部分用于验证模型的方法。</li>
+<li>vice versa 反之亦然</li>
+<li>protocol 协议</li>
 </ol>
 
     </div>
@@ -271,20 +343,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"></i> Markdown</a>
+              <a href="/tags/AI/" rel="tag"><i class="fa fa-tag"></i> AI</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/12/23/%E6%9C%80%E4%BC%98%E5%8C%96%E5%AF%BC%E8%AE%BA%E6%80%BB%E7%BB%93/" rel="prev" title="最优化导论总结">
-                  <i class="fa fa-angle-left"></i> 最优化导论总结
+                <a href="/2025/01/24/Blender%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" rel="prev" title="Blender入门笔记">
+                  <i class="fa fa-angle-left"></i> Blender入门笔记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/12/26/Typora%E6%80%8E%E4%B9%88%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3/" rel="next" title="Typora怎么打开多个窗口">
-                  Typora怎么打开多个窗口 <i class="fa fa-angle-right"></i>
+                <a href="/2025/02/24/%E7%8B%82%E8%AF%BB%E8%AE%BA%E6%96%87%EF%BC%9ADeepSeek-R1%20Incentivizing%20Reasoning%20Capability%20in%20LLMs%20via%20Reinforcement%20Learning/" rel="next" title="狂读论文：DeepSeek-R1 Incentivizing Reasoning Capability in LLMs via Reinforcement Learning">
+                  狂读论文：DeepSeek-R1 Incentivizing Reasoning Capability in LLMs via Reinforcement Learning <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
